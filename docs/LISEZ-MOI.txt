@@ -1,0 +1,14 @@
+Place tes documents PDF dans ce dossier en respectant EXACTEMENT ces noms :
+
+  - cv.pdf
+  - portfolio.pdf
+  - certification.pdf
+
+Ce sont ces fichiers qui s'ouvrent au clic (nouvel onglet) et qui s'affichent
+dans l'aperçu à droite de la section "Documents".
+
+Tu peux supprimer ce fichier LISEZ-MOI une fois les PDF ajoutés.
+
+Si tes fichiers ont d'autres noms ou d'autres formats (ex: .jpg, .png),
+modifie les attributs href="..." et data-doc="..." des liens dans index.html
+(section <!-- Documents -->) pour pointer vers les bons fichiers.

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage - Duqueine</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- En-tete (injecté par js/header.js) -->
+  <header class="entete" id="site-header" data-title="DUQUEINE" data-back="stage.html"></header>
+
+  <!-- Hero -->
+  <section class="sd-hero hero-duqueine">
+    <div class="sd-hero-inner">
+      <img class="hero-logo" src="images/duqueine.png" alt="Logo Duqueine">
+      <span class="sd-kicker">🚀 Retour d'expérience — Stage</span>
+      <h1>Duqueine Atlantique</h1>
+      <p>Administration systèmes, virtualisation &amp; sécurité en environnement industriel</p>
+      <div class="sd-meta">
+        <span>⏱️ 6 semaines</span>
+        <span>✈️ Composites &amp; aéronautique</span>
+        <span>🎓 BTS SIO — SISR</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article -->
+  <main class="sd-wrap">
+
+    <!-- L'entreprise -->
+    <article class="sd-card">
+      <h2>🏭 L'entreprise</h2>
+      <p>Duqueine Group conçoit et fabrique des pièces et sous-ensembles en
+        <strong>matériaux composites hautes performances</strong> pour l'aéronautique, le
+        nautisme, l'automobile, le médical et la défense. Le site <strong>Duqueine Atlantique</strong>
+        (Malville) est spécialisé dans l'aéronautique — panneaux acoustiques pour moteurs Airbus,
+        tuyauteries Dassault — et le nautisme, avec notamment un projet IMOCA aux côtés du skipper
+        Armel Tripon.</p>
+      <div class="sd-stats">
+        <div class="stat"><span class="num">126</span><span class="lbl">salariés<br>(50 % prod. / 50 % support)</span></div>
+        <div class="stat"><span class="num">27,6 M€</span><span class="lbl">de CA en 2022<br>(site Atlantique)</span></div>
+        <div class="stat"><span class="num">5</span><span class="lbl">secteurs d'activité<br>(aéro, nautisme, auto…)</span></div>
+      </div>
+    </article>
+
+    <!-- Mission 1 -->
+    <article class="sd-card">
+      <span class="sd-badge">Mission 1</span>
+      <h2>🛡️ Création d'une « station blanche »</h2>
+      <div class="axe-objectif">
+        <strong>Objectif :</strong> déployer un poste totalement isolé destiné à analyser et
+        désinfecter les clés USB des utilisateurs avant leur connexion au réseau de l'entreprise.
+      </div>
+      <p>La solution retenue repose sur <strong>Kaspersky Rescue Disk</strong>, configuré pour
+        démarrer automatiquement dès l'allumage du poste. Le déploiement a demandé de reconstruire
+        entièrement le disque : suppression de l'ancien Windows, formatage en <strong>EXT4</strong>
+        (pour contourner la limite de 4 Go du FAT32 face à l'image ISO), puis clonage de l'image
+        depuis une clé source à l'aide d'un Live-USB Ubuntu :</p>
+      <p class="code-line">sudo dd if=/dev/sdc1 of=/dev/sda1 bs=4M status=progress</p>
+      <p><strong>Principale difficulté :</strong> sous Linux, la nomenclature des disques
+        (<code>sda</code>, <code>sdb</code>, <code>sdc</code>) changeait à chaque redémarrage. Il
+        fallait donc vérifier soigneusement la cible avant chaque opération pour ne pas écraser le
+        mauvais disque.</p>
+    </article>
+
+    <!-- Mission 2 -->
+    <article class="sd-card">
+      <span class="sd-badge">Mission 2</span>
+      <h2>💻 Reconfiguration &amp; revalorisation d'un parc PC</h2>
+      <div class="axe-objectif">
+        <strong>Objectif :</strong> réinitialiser, diagnostiquer et masteriser plus de 20 ordinateurs
+        (fixes et portables) afin de les revendre aux salariés à bas prix.
+      </div>
+      <p>Le processus de masterisation suivait quatre étapes :</p>
+      <ul>
+        <li>Installation de base (Windows 10 ou 11 selon l'éligibilité matérielle) ;</li>
+        <li>mises à jour système et flashage du BIOS ;</li>
+        <li>inventaire des composants (GPU / CPU) via <code>dxdiag</code> pour estimer le prix de revente ;</li>
+        <li>préparation à la redistribution avec <strong>Sysprep</strong> (remise à zéro de l'expérience de configuration, OOBE).</li>
+      </ul>
+      <div class="sd-result">✅ Plus de <strong>20 postes</strong> remis à neuf et revalorisés.</div>
+    </article>
+
+    <!-- Mission 3 -->
+    <article class="sd-card">
+      <span class="sd-badge">Mission 3</span>
+      <h2>📊 Supervision avec Zabbix</h2>
+      <div class="axe-objectif">
+        <strong>Objectif :</strong> mettre en place une supervision des équipements via un serveur Zabbix.
+      </div>
+      <p>Côté technique : mise à jour des services Debian, configuration du fichier
+        <code>sudoers</code>, installation du paquet et création d'une base de données locale
+        sécurisée (mots de passe générés aléatoirement).</p>
+      <p><strong>Blocage rencontré :</strong> le serveur Zabbix principal, basé en France, ne
+        parvenait pas à joindre les équipements du site mexicain (problème de flux firewall /
+        routage). La synchronisation des bases étant impossible, la mission est restée en attente de
+        résolution réseau — une limite honnête mais formatrice sur les contraintes d'un réseau
+        multi-sites.</p>
+    </article>
+
+    <!-- Étude de cas -->
+    <article class="sd-card">
+      <span class="sd-badge">Étude de cas</span>
+      <h2>🗂️ Migration du wiki d'entreprise (Wiki.js)</h2>
+      <p>Le service informatique utilise <strong>Wiki.js</strong> comme base de connaissances
+        centralisée (procédures de résolution d'incidents, documentation interne). Initialement
+        mutualisé sur un serveur hébergeant aussi un service GitHub, l'objectif était d'isoler
+        l'application sur sa propre machine virtuelle, selon le principe « une fonction = un serveur ».</p>
+
+      <h3 class="sd-sub">🧩 Architecture cible (sur Proxmox VE)</h3>
+      <div class="archi">
+        <div class="vm">
+          <h4>VM Application &amp; Data</h4>
+          <p>Debian 12 · Node.js · MariaDB — héberge Wiki.js et sa base de données.</p>
+        </div>
+        <div class="vm">
+          <h4>VM Reverse Proxy</h4>
+          <p>Apache2 — point d'entrée des clients et couche de sécurité.</p>
+        </div>
+      </div>
+
+      <h3 class="sd-sub">⚙️ Déploiement &amp; migration</h3>
+      <p>Création d'une VM Debian 12 (2 vCPU, 2 Go de RAM, 20 Go de stockage) avec IP fixe, puis
+        installation de Node.js et de MariaDB. Les données ont été migrées par export de l'ancienne
+        base (<code>mysqldump</code>), transfert sécurisé via WinSCP, puis restauration. Un service
+        <strong>systemd</strong> (<code>wiki.service</code>) garantit le démarrage automatique de
+        l'application au boot du serveur.</p>
+
+      <h3 class="sd-sub">🔒 Reverse proxy &amp; sécurité</h3>
+      <p>Un reverse proxy <strong>Apache2</strong> (modules <code>proxy</code> et <code>headers</code>)
+        redirige le trafic du port 80 vers l'application, tout en injectant des en-têtes de sécurité
+        (<code>X-Frame-Options</code>, <code>X-XSS-Protection</code>, <code>X-Content-Type-Options</code>).</p>
+
+      <h3 class="sd-sub">⚠️ Limite rencontrée (HTTPS)</h3>
+      <p>Un certificat SSL auto-signé a bien été généré (clé privée et demande de signature), mais
+        faute d'un bloc <code>VirtualHost *:443</code> actif pointant vers les certificats, l'accès
+        est resté en <strong>HTTP</strong> à la fin du stage — une piste d'amélioration clairement
+        identifiée.</p>
+    </article>
+
+    <!-- Bilan -->
+    <article class="sd-card sd-conclusion">
+      <h2>📈 Bilan &amp; compétences acquises</h2>
+      <p>Ce stage a été une immersion totale de six semaines dans un environnement de production
+        industrielle exigeant, au cœur du secteur aéronautique.</p>
+      <div class="chips">
+        <span class="tag">Linux en ligne de commande (Debian, Ubuntu)</span>
+        <span class="tag">Virtualisation sous Proxmox VE</span>
+        <span class="tag">Bases de données SQL</span>
+        <span class="tag">Sécurisation réseau (reverse proxy)</span>
+      </div>
+      <p>Une expérience qui confirme pleinement ma volonté de poursuivre des études supérieures dans
+        la filière <strong>administration systèmes et réseaux</strong>.</p>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="site-footer"></footer>
+  <script src="js/footer.js"></script>
+
+  <!-- Bouton retour en haut -->
+  <button id="backToTop" class="back-to-top" aria-label="Remonter en haut de page">↑</button>
+
+  <script src="js/header.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/scroll-top.js"></script>
+</body>
+</html>

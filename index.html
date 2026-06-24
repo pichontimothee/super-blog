@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de T. Pichon</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- En-tete (injecté par js/header.js) -->
+  <header class="entete" id="site-header"></header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="conteneur">
+      <h1>Timothée Pichon</h1>
+      <p>De la théorie à la pratique : explorez mon parcours en BTS SIO à travers
+         mes réalisations et ma veille technologique.</p>
+    </div>
+  </section>
+  <div class="hero-image"></div>
+
+  <!-- A propos -->
+  <section class="apropos">
+    <div class="conteneur">
+      <h2>A propos de moi&nbsp;:</h2>
+      <p>Je m'appelle Timothée Pichon, étudiant en première année de BTS Services
+         Informatiques aux Organisations (SIO), option SISR. Passionné par
+         l'informatique depuis le collège, j'ai décidé de transformer cette passion
+         en compétences professionnelles concrètes.</p>
+      <p>Au cours de ma formation, j'ai eu l'opportunité de réaliser plusieurs stages
+         en entreprise, notamment chez Solocrabotage, SCA Ouest et Duqueine Atlantique,
+         où j'ai pu développer mes compétences en infrastructure réseau, support
+         technique et maintenance. Ces expériences m'ont permis de confronter mes
+         connaissances théoriques aux réalités du terrain et de comprendre les enjeux
+         concrets du secteur informatique.</p>
+
+      <div class="competences">
+        <div class="skill">
+          <div class="label">base de donnée</div>
+          <div class="barre-zone">
+            <div class="barre"><span style="width:63%;background:var(--orange)"></span></div>
+            <div class="pct" style="left:63%;background:var(--orange)">63%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="label">systèmes et réseaux</div>
+          <div class="barre-zone">
+            <div class="barre"><span style="width:94%;background:var(--vert)"></span></div>
+            <div class="pct" style="left:94%;background:var(--vert)">94%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="label">python</div>
+          <div class="barre-zone">
+            <div class="barre"><span style="width:72%;background:var(--bleu)"></span></div>
+            <div class="pct" style="left:72%;background:var(--bleu)">72%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="label">développement web</div>
+          <div class="barre-zone">
+            <div class="barre"><span style="width:32%;background:var(--violet)"></span></div>
+            <div class="pct" style="left:32%;background:var(--violet)">32%</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="aspirations"><strong>Mes aspirations professionnelles :</strong>
+         À l'issue de mon BTS, je souhaite poursuivre en licence professionnelle.
+         Mon objectif est de contribuer à des projets innovants et de continuer à
+         développer mes compétences dans un environnement professionnel stimulant.</p>
+    </div>
+  </section>
+
+  <!-- Documents -->
+  <section class="section docs">
+    <div class="conteneur">
+      <h2>Documents</h2>
+      <div class="docs-grille">
+
+        <!-- Liste des liens -->
+        <div class="docs-liste">
+          <a class="doc-item" href="docs/cv.pdf" target="_blank" rel="noopener"
+             data-doc="docs/cv.pdf">
+            <h3>CV</h3>
+            <p>Téléchargez mon CV pour en savoir plus sur mon parcours et mes compétences.</p>
+          </a>
+          <a class="doc-item" href="docs/synthese.pdf" target="_blank" rel="noopener"
+             data-doc="docs/synthese.pdf">
+            <h3>synthèse</h3>
+            <p>Découvrez mes réalisations techniques et projets développés durant ma formation.</p>
+          </a>
+          <a class="doc-item" href="docs/certification.pdf" target="_blank" rel="noopener"
+             data-doc="docs/certification.pdf">
+            <h3>certification</h3>
+            <p>Découvrez les certifications qui attestent de mes compétences techniques.</p>
+          </a>
+        </div>
+
+        <!-- Zone d'apercu (a droite) -->
+        <div class="docs-apercu">
+          <iframe id="docPreview" title="Prévisualisation du document"></iframe>
+          <div class="apercu-vide" id="apercuVide">
+            👆 Survolez un document pour l'aperçu<br>
+            <small>(cliquez pour l'ouvrir dans un nouvel onglet)</small>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projets -->
+  <section class="section">
+    <div class="conteneur">
+      <h2>Section heading</h2>
+      <div class="cartes">
+        <a class="carte" href="veille.html">
+          <div class="vignette"></div>
+          <div class="corps">
+            <h3>Veille technologique</h3>
+            <p>Mes recherches et analyses sur les tendances de l'informatique et du big data.</p>
+            <span class="tag">veille</span>
+          </div>
+        </a>
+        <a class="carte" href="stage.html">
+          <div class="vignette"></div>
+          <div class="corps">
+            <h3>Stages</h3>
+            <p>Retours d'expérience sur mes stages chez Solocrabotage, SCA Ouest et Duqueine.</p>
+            <span class="tag">stages</span>
+          </div>
+        </a>
+        <a class="carte" href="#">
+          <div class="vignette"></div>
+          <div class="corps">
+            <h3>Projets</h3>
+            <p>Réalisations techniques menées durant ma formation en BTS SIO.</p>
+            <span class="tag">projets</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-wrapper">
+    <div class="contact-section">
+      <!-- En-tête -->
+      <div class="contact-header">
+        <h1>💬 Me Contacter</h1>
+        <p>Une question ? Un projet ? N'hésitez pas à me contacter !</p>
+      </div>
+
+      <!-- Contenu -->
+      <div class="contact-content">
+
+        <!-- Formulaire -->
+        <div class="contact-form">
+          <form id="contactForm">
+
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Envoyer le message</button>
+
+            <div class="success-message" id="successMessage">
+              ✓ Message envoyé avec succès ! Je vous répondrai rapidement.
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Informations de contact -->
+        <div class="contact-info">
+
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <p><a href="mailto:pichontimothee@gmail.com">pichontimothee@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">💼</div>
+            <div class="contact-details">
+              <h3>LinkedIn</h3>
+              <p><a href="https://www.linkedin.com/in/timothee-pichon-823b09297/" target="_blank">linkedin.com/in/timothee-pichon</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">💻</div>
+            <div class="contact-details">
+              <h3>GitHub</h3>
+              <p><a href="https://github.com/pichontimothee" target="_blank">github.com/pichontimothee</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h3>Localisation</h3>
+              <p>Saint-Étienne-de-Montluc, Nantes</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="site-footer"></footer>
+  <script src="js/footer.js"></script>
+
+  <!-- Bouton retour en haut -->
+  <button id="backToTop" class="back-to-top" aria-label="Remonter en haut de page">↑</button>
+
+  <script src="js/header.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/documents.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/scroll-top.js"></script>
+</body>
+</html>

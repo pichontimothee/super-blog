@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage - SCA Ouest</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- En-tete (injecté par js/header.js) -->
+  <header class="entete" id="site-header" data-title="SCA OUEST" data-back="stage.html"></header>
+
+  <!-- Hero -->
+  <section class="sd-hero">
+    <div class="sd-hero-inner">
+      <span class="sd-kicker">🚀 Retour d'expérience — Stage</span>
+      <h1>SCA Ouest</h1>
+      <p>Au cœur de l'automatisation et du déploiement réseau</p>
+      <div class="sd-meta">
+        <span>⏱️ 6 semaines</span>
+        <span>🏢 Centrale d'achat E.Leclerc</span>
+        <span>🎓 BTS SIO — SISR</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article -->
+  <main class="sd-wrap">
+    <p class="sd-intro">Bonjour à tous ! Après 6 semaines intenses et riches en apprentissages
+      au sein du service informatique technique de la SCA Ouest (centrale d'achat E.Leclerc),
+      c'est l'heure du bilan.</p>
+    <p>Pendant ce stage, j'ai eu la chance de piloter deux projets majeurs mêlant système,
+      réseau et automatisation. Retour sur ces missions qui ont rythmé mon quotidien.</p>
+
+    <!-- Projet 1 -->
+    <article class="sd-card">
+      <span class="sd-badge">Projet 1</span>
+      <h2>🛠️ Déploiement industriel &amp; optimisation de scripts</h2>
+      <p class="sd-soustitre">Terminaux embarqués JLT</p>
+      <p>Le gros morceau de mon stage a été la modernisation du parc de terminaux embarqués
+        (JLT) installés directement sur les chariots élévateurs des préparateurs de commandes.
+        L'objectif ? Remplacer les anciennes machines obsolètes par des terminaux durcis,
+        performants et sécurisés.</p>
+
+      <h3 class="sd-sub">💻 Mon défi : dompter le PowerShell</h3>
+      <p>Pour éviter de configurer chaque machine à la main, l'équipe m'a fourni un script
+        d'automatisation. Problème : le script plantait systématiquement au premier démarrage
+        sur la configuration Wi-Fi.</p>
+      <p><strong>Le problème (asynchronisme) :</strong> le script allait plus vite que le
+        matériel ! Il tentait d'injecter l'adresse IP fixe alors que la carte Wi-Fi n'avait
+        pas encore fini de s'initialiser au démarrage de Windows.</p>
+
+      <div class="compare">
+        <div class="compare-box avant">
+          <span class="compare-tag">❌ Avant mon intervention</span>
+          <ol class="flow">
+            <li>Allumage du PC</li>
+            <li>Lancement du script</li>
+            <li>Tentative de configuration IP</li>
+            <li class="ko">ÉCHEC — la carte Wi-Fi dort encore</li>
+          </ol>
+        </div>
+        <div class="compare-box apres">
+          <span class="compare-tag">✓ Après ma solution — boucle d'attente</span>
+          <ol class="flow">
+            <li>Allumage du PC</li>
+            <li>Lancement du script</li>
+            <li>Attente active de la carte Wi-Fi (boucle)</li>
+            <li>Carte active ?</li>
+            <li>Configuration IP</li>
+            <li class="ok">SUCCÈS</li>
+          </ol>
+        </div>
+      </div>
+
+      <p>Désormais, le script attend que l'interface soit bien active avant d'appliquer les
+        paramètres.</p>
+      <div class="sd-result">✅ Déploiement fiable à <strong>100 %</strong>, en seulement
+        <strong>3 à 5 minutes</strong> par machine.</div>
+    </article>
+
+    <!-- Projet 2 -->
+    <article class="sd-card">
+      <span class="sd-badge">Projet 2</span>
+      <h2>🖥️ Affichage dynamique sous Linux avec Xibo</h2>
+      <p>Mon second projet consistait à déployer et configurer une solution d'affichage
+        dynamique pour la communication interne du site, en installant le lecteur
+        <strong>Xibo Player</strong> sur un environnement <strong>Ubuntu 24.04</strong>.</p>
+      <p>Ce projet m'a permis de me frotter aux contraintes réseaux d'une grande entreprise :
+        il a fallu configurer les variables d'environnement pour traverser proprement le proxy
+        de la SCA Ouest et créer des scripts de démarrage automatique pour que l'affichage se
+        lance tout seul dès le boot.</p>
+    </article>
+
+    <!-- Le quotidien -->
+    <article class="sd-card">
+      <h2>🔌 Le quotidien : brassage réseau &amp; gestion de parc</h2>
+      <p>En parallèle, j'ai participé activement à la vie du service.</p>
+      <div class="sd-stats">
+        <div class="stat">
+          <span class="num">399</span>
+          <span class="lbl">imprimantes gérées<br>(bureautiques &amp; thermiques Zebra)</span>
+        </div>
+        <div class="stat">
+          <span class="num">RJ45</span>
+          <span class="lbl">brassage de câbles dans les baies pour connecter les nouveaux bureaux</span>
+        </div>
+        <div class="stat">
+          <span class="num">2</span>
+          <span class="lbl">projets majeurs pilotés de A à Z</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Conclusion -->
+    <article class="sd-card sd-conclusion">
+      <h2>📈 Ce que je retiens de cette expérience</h2>
+      <p>Ce stage à la SCA Ouest a été un excellent tremplin. Il m'a permis de faire le pont
+        entre la théorie de mon BTS SIO SISR et la réalité d'une infrastructure de production
+        d'envergure.</p>
+      <p>Un grand merci à toute l'équipe informatique pour son accueil, sa confiance et son
+        accompagnement. Cette expérience valide à 100 % mon projet professionnel et me motive
+        à fond pour la suite : <strong>intégrer une école d'ingénieurs après mon BTS !</strong></p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="site-footer"></footer>
+  <script src="js/footer.js"></script>
+
+  <!-- Bouton retour en haut -->
+  <button id="backToTop" class="back-to-top" aria-label="Remonter en haut de page">↑</button>
+
+  <script src="js/header.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/scroll-top.js"></script>
+</body>
+</html>

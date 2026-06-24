@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Big Data - T. Pichon</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-bigdata">
+
+  <!-- En-tete (injecté par js/header.js) -->
+  <header class="entete" id="site-header" data-title="LE BIG DATA" data-back="veille.html"></header>
+
+  <main class="conteneur bd-main">
+
+    <!-- Bloc 1 : intro + comparaison + 3V -->
+    <section class="bd-card">
+      <p>
+        Les données sont des informations issues de diverses sources, tels que des
+        personnes, des images, du texte, des capteurs et des sites web. Elles proviennent
+        également d'appareils technologiques comme les téléphones portables, les ordinateurs,
+        les kiosques, les tablettes et les caisses enregistreuses. Récemment, le volume de
+        données générées par les capteurs a connu une importante augmentation. Les capteurs
+        sont désormais installés dans de plus en plus de lieux et dans un nombre croissant
+        d'objets, y compris les caméras de sécurité, les feux de circulation, les voitures
+        intelligentes, les thermomètres et même les vignes.
+      </p>
+      <p>
+        Le terme Big Data désigne une grande quantité de données, mais qu'entend-on par
+        « grande quantité » ? Personne ne sait exactement à partir de quel volume les données
+        entrent dans la catégorie du « Big Data ».
+      </p>
+
+      <div class="bd-split">
+        <div class="bd-img">
+          <img src="images/big data/big-data-statistics.jpg" alt="Objets connectés générant des données">
+        </div>
+        <div>
+          <p>À titre de comparaison, supposons que la taille moyenne d'un morceau MP3 est d'environ 3 Mo.</p>
+          <ul>
+            <li>Les capteurs d'une « maison connectée » peuvent produire jusqu'à 1 gigaoctet (Go) de données par semaine.</li>
+            <li>Les capteurs d'une voiture autonome peuvent générer 4 000 gigaoctets (Go) de données par jour. Cela représente 500 gigaoctets (Go) de données, soit l'équivalent d'environ 167 000 titres MP3.</li>
+            <li>Les capteurs de sécurité dans le secteur des opérations minières peuvent générer jusqu'à 2.4 téraoctets (To) de données toutes les minutes. Cela représente 300 Go, soit environ 100 000 titres MP3.</li>
+            <li>Un moteur d'Airbus A380 génère 1 pétaoctet (Po) de données sur un vol reliant Londres à Singapour. Cela représente 1 million de Go, soit environ 334 millions de titres MP3.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>
+        Bien que le Big Data représente un réel défi pour les entreprises en matière de
+        stockage et d'analytique, il peut également fournir des informations précieuses pour
+        ajuster leur mode de fonctionnement et améliorer la satisfaction client.
+      </p>
+
+      <p class="bd-souligne">Le Big Data se caractérise par les 3V, un modèle qui définit ses principales dimensions :</p>
+
+      <div class="v3-grille">
+        <div class="v3-carte">
+          <h3>VOLUME</h3>
+          <p>Quantités massives de données (téraoctets, pétaoctets)</p>
+        </div>
+        <div class="v3-carte">
+          <h3>VARIETE</h3>
+          <p>Diversité des formats (texte, image, vidéo, logs...)</p>
+        </div>
+        <div class="v3-carte">
+          <h3>VITESSE</h3>
+          <p>Vitesse de génération et de traitement des données</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloc 2 : chiffres cles -->
+    <section class="bd-card">
+      <div class="bd-split">
+        <div>
+          <p>
+            Le Forum économique mondial prévoit que la quantité de données générées
+            quotidiennement sera de 463 exaoctets (EB) dans le monde. Un EB équivaut à un
+            milliard de gigaoctets ! Pour mettre cet élément en contexte, selon Statista,
+            chaque minute de chaque jour :
+          </p>
+          <ul>
+            <li>Nous chargeons plus de 500 heures de vidéos YouTube.</li>
+            <li>Nous envoyons plus de 69 millions de messages texte.</li>
+            <li>Nous diffusons plus de 347 000 Go de vidéos Netflix.</li>
+            <li>Nous envoyons 198 millions d'e-mails.</li>
+            <li>Nous téléchargeons plus de 60 000 images Instagram.</li>
+          </ul>
+        </div>
+        <div class="bd-img">
+          <img src="images/big data/big-data-chiffres.jpg" alt="Chiffres clés du Big Data">
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloc 3 : stockage + edge computing -->
+    <section class="bd-card">
+      <p>
+        Le Big Data est généralement stocké sur plusieurs serveurs, habituellement hébergés
+        dans des data centers. Pour la sécurité, l'accessibilité et la redondance, les
+        données sont généralement distribuées et/ou répliquées sur de nombreux serveurs
+        différents dans de nombreux data centers distincts.
+      </p>
+
+      <h2 class="bd-titre">Edge computing</h2>
+      <p>
+        L'Edge computing est une architecture qui utilise les clients ou les appareils de
+        « périphérie » des utilisateurs finaux pour réaliser une portion substantielle du
+        prétraitement et du stockage dont une entreprise a besoin. L'Edge computing a été
+        conçu pour maintenir les données au plus près de la source pour le prétraitement.
+      </p>
+      <p>
+        Les données de capteur, en particulier, peuvent être préalablement traitées près de
+        l'endroit où elles ont été collectées. Les informations recueillies avec le traitement
+        préalable peuvent être retransmises au système de l'entreprise afin de modifier les
+        processus, le cas échéant. Étant donné que les données de capteur sont préalablement
+        traitées par des terminaux au sein de ce système, les communications entre les serveurs
+        et les terminaux sont plus rapides. Cette opération nécessite moins de bande passante
+        que l'accès continu au cloud.
+      </p>
+      <p>
+        Une fois que les données ont été préalablement traitées, elles sont souvent stockées à
+        long terme, sauvegardées ou analysées plus en détail via le cloud.
+      </p>
+      <div class="bd-img bd-img--large">
+        <img src="images/big data/edge_computing.png" alt="Schéma Data Center, Cloud et Edge Computing">
+      </div>
+    </section>
+
+    <!-- Bloc 4 : cloud -->
+    <section class="bd-card">
+      <h2 class="bd-titre">Cloud et Cloud Computing</h2>
+      <p>
+        Comme indiqué précédemment, le cloud est un ensemble de data centers ou des groupes de
+        serveurs connectés. L'accès aux logiciels, au stockage et aux services disponibles sur
+        les serveurs est obtenu via une interface de navigateur Internet. Les services cloud
+        sont fournis par de nombreuses grandes entreprises comme Google, Microsoft et Apple.
+        Les services de stockage cloud sont fournis par différents fournisseurs, dont Google
+        Drive, Apple iCloud, Microsoft OneDrive et Dropbox.
+      </p>
+      <p>Du point de vue des particuliers, les services cloud permettent les actions suivantes :</p>
+      <ul>
+        <li>Stocker toutes les données, telles que les images, la musique, les vidéos et les e-mails, libérant ainsi de l'espace sur le disque dur local</li>
+        <li>Accéder à de nombreuses applications au lieu de les télécharger sur un appareil local</li>
+        <li>Accéder aux données et aux applications de n'importe où, à tout moment et sur n'importe quel appareil</li>
+      </ul>
+      <p>
+        L'un des inconvénients liés à l'utilisation du cloud est que vos données peuvent tomber
+        entre de mauvaises mains. Vos données sont à la merci de la robustesse de la sécurité du
+        fournisseur de cloud que vous avez choisi.
+      </p>
+      <p>Du point de vue des entreprises, les services cloud et le cloud computing répondent à divers problèmes en matière de gestion des données :</p>
+      <ul>
+        <li>Il permet d'accéder aux données de l'entreprise partout, à tout moment.</li>
+        <li>Il rationalise les opérations IT d'une entreprise en s'abonnant uniquement aux services nécessaires.</li>
+        <li>Il élimine ou réduit le besoin d'équipements IT, de maintenance et de gestion sur site.</li>
+        <li>Il réduit le coût des équipements, de l'énergie, des installations physiques requises et le besoin en formation du personnel.</li>
+        <li>Il permet de répondre rapidement aux exigences liées au volume croissant des données.</li>
+      </ul>
+    </section>
+
+    <!-- Bloc 5 : traitement distribue -->
+    <section class="bd-card">
+      <h2 class="bd-titre">Traitement distribué</h2>
+      <p>
+        En matière de gestion des données, le traitement analytique ne posait pas de problème
+        lorsque seuls les humains créaient des données. Le volume de données était gérable et
+        relativement facile à répartir. Toutefois, avec l'explosion des systèmes d'automatisation
+        et la croissance exponentielle des applications web et des données générées par les
+        machines, l'analytique est de plus en plus difficile à gérer. En effet, 90 % des données
+        actuellement disponibles ont été générées au cours des deux dernières années. Une telle
+        augmentation de volume dans un si court laps de temps est un signe révélateur d'une
+        croissance exponentielle. Il devient difficile de traiter et d'analyser une si grande
+        quantité de données dans un délai raisonnable.
+      </p>
+      <p>
+        Au lieu de traiter de grandes bases de données avec de gros ordinateurs grand public
+        puissants et de les stocker sur des baies de disques géantes (montée en charge verticale),
+        le traitement distribué des données récupère un grand volume de données et les divise en
+        ensembles plus petits. Ces volumes de données plus petits sont distribués dans de nombreux
+        emplacements où ils sont traités par de nombreux ordinateurs équipés de processeurs plus
+        petits. Dans l'architecture distribuée, chaque ordinateur analyse sa partie de l'image du
+        Big Data (montée en charge horizontale).
+      </p>
+      <p>
+        La plupart des systèmes de fichiers distribués sont conçus pour ne pas être visibles par
+        les programmes client. Le système de fichiers distribué localise les fichiers et déplace
+        les données, mais les utilisateurs n'ont aucun moyen de savoir de quelle manière les
+        fichiers sont distribués sur les différents serveurs et nœuds. Les utilisateurs accèdent
+        aux fichiers comme si ces derniers étaient stockés sur leur propre machine. Tous les
+        utilisateurs disposent de la même vue du système de fichiers et peuvent accéder
+        simultanément aux mêmes données.
+      </p>
+    </section>
+
+    <!-- Bloc 6 : actualite -->
+    <section class="bd-card">
+      <h2 class="bd-titre">Actualité</h2>
+      <div class="actu-timeline">
+
+        <article class="actu-carte">
+          <h3>🤖 IA Générative + Big Data + Cloud</h3>
+          <p>OpenAI, Google et Microsoft intègrent l'IA générative dans leurs plateformes cloud
+             Big Data. Interroger des pétaoctets de données en langage naturel devient réalité
+             avec ChatGPT Enterprise et Gemini.</p>
+          <span class="actu-date">Novembre 2024</span>
+        </article>
+
+        <article class="actu-carte">
+          <h3>⚡ 5G et Edge Computing</h3>
+          <p>Le déploiement massif de la 5G permet des latences &lt;1ms, rendant l'Edge Computing
+             viable pour la chirurgie à distance, les jeux cloud et la réalité augmentée.</p>
+          <span class="actu-date">Octobre 2024</span>
+        </article>
+
+        <article class="actu-carte">
+          <h3>🌍 Edge-as-a-Service (EaaS)</h3>
+          <p>Cloudflare Workers, AWS Wavelength et Azure Edge Zones démocratisent l'Edge Computing.
+             Les développeurs déploient du code "à la périphérie" aussi facilement que dans le cloud.</p>
+          <span class="actu-date">Septembre 2024</span>
+        </article>
+
+        <article class="actu-carte">
+          <h3>🌱 Green Cloud &amp; Data Centers durables</h3>
+          <p>Les géants du cloud s'engagent : Google atteint 100% d'énergie renouvelable, Microsoft
+             vise zéro carbone en 2030. Le refroidissement liquide et l'optimisation de l'IA
+             réduisent l'empreinte écologique.</p>
+          <span class="actu-date">Août 2024</span>
+        </article>
+
+        <article class="actu-carte">
+          <h3>🔒 Edge AI &amp; Vie privée</h3>
+          <p>Apple et Samsung intègrent des modèles IA directement dans les appareils (iPhone 16,
+             Galaxy S24). Traitement local = les données personnelles ne quittent jamais l'appareil.</p>
+          <span class="actu-date">Juillet 2024</span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Bloc 7 : sources -->
+    <section class="bd-card">
+      <h2 class="bd-titre">Sources et References</h2>
+      <p>Cette veille est basée sur une consultation régulière de sources reconnues dans le
+         domaine du Big Data, Cloud et Edge Computing.</p>
+      <div class="sources-grille">
+        <div class="source-carte"><h4>Gartner</h4><p>rapports Big Data &amp; Cloud</p></div>
+        <div class="source-carte"><h4>IDC</h4><p>Etude Edge Computing</p></div>
+        <div class="source-carte"><h4>AWS Blog</h4><p>Innovations Cloud</p></div>
+        <div class="source-carte"><h4>Google Cloud Blog</h4><p>Actualités GCP</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="site-footer"></footer>
+  <script src="js/footer.js"></script>
+
+  <!-- Bouton retour en haut -->
+  <button id="backToTop" class="back-to-top" aria-label="Remonter en haut de page">↑</button>
+
+  <script src="js/header.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/scroll-top.js"></script>
+</body>
+</html>
