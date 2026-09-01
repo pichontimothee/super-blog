@@ -6,7 +6,7 @@ const docItems = document.querySelectorAll('.doc-item');
 const preview = document.getElementById('docPreview');
 const apercuVide = document.getElementById('apercuVide');
 
-const PREVISUALISABLE = /\.(pdf|png|jpe?g|gif|webp|svg)$/i;
+const PREVISUALISABLE = /\.(pdf|html?|png|jpe?g|gif|webp|svg)$/i;
 
 docItems.forEach(item => {
   item.addEventListener('mouseenter', () => {
