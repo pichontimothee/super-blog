@@ -1,45 +1,51 @@
 // Gestion du formulaire de contact
+// Envoi réel via Web3Forms : le service reçoit le POST et envoie
+// un email à l'adresse liée à la clé d'accès (voir champ caché
+// "access_key" dans le formulaire).
 const form = document.getElementById('contactForm');
 const successMessage = document.getElementById('successMessage');
 
-form.addEventListener('submit', function (e) {
+form.addEventListener('submit', async function (e) {
   e.preventDefault();
 
-  // Récupérer les données du formulaire
-  const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    subject: document.getElementById('subject').value,
-    message: document.getElementById('message').value
-  };
+  const bouton = form.querySelector('.submit-btn');
 
-  // Simuler l'envoi (en réalité, à connecter à un backend)
-  console.log('Données du formulaire:', formData);
+  bouton.disabled = true;
+  afficher('Envoi…', '');
 
-  // Afficher le message de succès
+  try {
+    // Web3Forms accepte directement le contenu du formulaire (FormData)
+    const reponse = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(form)
+    });
+    const data = await reponse.json().catch(() => ({}));
+
+    if (reponse.ok && data.success) {
+      form.reset();
+      afficher('✓ Message envoyé avec succès ! Je vous répondrai rapidement.', 'ok');
+    } else {
+      afficher('⚠️ ' + (data.message || "Un souci est survenu à l'envoi. Réessayez."), 'erreur');
+    }
+  } catch (err) {
+    afficher('⚠️ Impossible d\'envoyer pour le moment. Vérifiez votre connexion et réessayez.', 'erreur');
+  } finally {
+    bouton.disabled = false;
+  }
+});
+
+function afficher(message, type) {
+  successMessage.textContent = message;
+  // 'ok' garde le style de succès existant ; 'erreur' le neutralise
+  successMessage.style.color = type === 'erreur' ? '#c0392b' : '';
   successMessage.classList.add('show');
 
-  // Réinitialiser le formulaire
-  form.reset();
-
-  // Masquer le message après 5 secondes
-  setTimeout(() => {
-    successMessage.classList.remove('show');
-  }, 5000);
-
-  /*
-  Pour un vrai envoi d'email, utiliser :
-  - Un backend (PHP, Node.js, Python)
-  - Un service comme EmailJS, Formspree, ou Netlify Forms
-
-  Exemple avec EmailJS :
-  emailjs.send('service_id', 'template_id', formData)
-    .then(() => {
-      successMessage.classList.add('show');
-      form.reset();
-    });
-  */
-});
+  if (type === 'ok') {
+    setTimeout(() => {
+      successMessage.classList.remove('show');
+    }, 5000);
+  }
+}
 
 // Petite animation des champs au focus
 const inputs = document.querySelectorAll('input, textarea');
