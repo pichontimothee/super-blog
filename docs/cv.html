@@ -419,8 +419,17 @@ body {
 }
 
 @media print {
-  body { background: white; padding: 0; }
-  .cv { box-shadow: none; width: 100%; }
+  body { background: white; padding: 0; margin: 0; }
+  .cv { box-shadow: none; width: 100%; min-height: 297mm; }
+  .sidebar {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background: #0d1b2a !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }
 </style>
 
