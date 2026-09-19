@@ -75,6 +75,11 @@ body.dark .theme-toggle:hover{background:rgba(255,255,255,.08);}
   margin-top:18px;max-width:640px;
   font-size:1.25rem;color:var(--texte-doux);
 }
+.hero-themes{
+  margin-top:14px !important;
+  font-size:1rem !important;font-weight:600;
+  color:#667eea !important;letter-spacing:.3px;
+}
 .hero-image{
   height:340px;width:100%;
   background-image:url("../images/connexion_bleu.jpg");
@@ -108,7 +113,28 @@ body.dark .theme-toggle:hover{background:rgba(255,255,255,.08);}
   display:flex;align-items:center;justify-content:center;
   font-weight:600;color:#222;font-size:.85rem;
 }
-.aspirations{margin-top:70px;font-size:1.1rem;color:#e8edf3;}
+/* Pastilles d'infos "À propos" */
+.apropos-chips{display:flex;flex-wrap:wrap;gap:12px;margin:6px 0 30px;}
+.apropos-chips span{
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);
+  color:#fff;padding:8px 16px;border-radius:30px;
+  font-size:.92rem;font-weight:500;backdrop-filter:blur(2px);
+}
+/* Sous-titre "Mes compétences" */
+.apropos-sous{
+  margin-top:52px;margin-bottom:6px;font-size:1.6rem;font-weight:700;color:#fff;
+}
+.apropos-sous::after{
+  content:"";display:block;width:56px;height:3px;margin-top:10px;
+  background:#667eea;border-radius:3px;
+}
+/* Encadré aspirations */
+.aspirations{
+  margin-top:56px;font-size:1.1rem;color:#e8edf3;
+  background:rgba(102,126,234,.14);border-left:4px solid #667eea;
+  border-radius:0 14px 14px 0;padding:22px 26px;
+}
+.aspirations strong{color:#fff;}
 
 /* ---------- Documents ---------- */
 .section{padding:72px 0;}
@@ -261,7 +287,10 @@ body.dark .tag{background:#2c2440;}
 .footer .col{text-align:center;}
 .footer a{transition:color .2s ease;}
 .footer a:hover{color:#667eea;text-decoration:underline;}
-.footer-bas{text-align:center;margin-top:44px;color:var(--texte-doux);font-size:.95rem;}
+.footer-bas{text-align:center;margin-top:44px;color:var(--texte-doux);font-size:.95rem;
+  display:flex;flex-direction:column;gap:6px;align-items:center;}
+.footer-credit{font-size:.8rem;opacity:.8;}
+.footer-credit a{text-decoration:underline;text-underline-offset:2px;}
 
 /* ---------- Page Stages ---------- */
 .entete-gauche{display:flex;align-items:center;gap:22px;}
@@ -465,6 +494,10 @@ body.dark.page-bigdata{background:#0f1115;}
 .bd-img--large{margin-top:30px;}
 .bd-img--small{max-width:400px;margin:26px auto 0;}
 
+/* Schéma Edge computing (SVG inline, s'adapte au thème) */
+.edge-schema{margin:30px auto 0;max-width:760px;}
+.edge-schema svg{width:100%;height:auto;display:block;}
+
 /* Cartes 3V */
 .v3-grille{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:30px;}
 .v3-carte{
@@ -505,6 +538,22 @@ body.dark.page-bigdata{background:#0f1115;}
 
 /* Hero de la page IA (réutilise .sd-hero) */
 .sd-hero.hero-ia{background-image:url("../images/ia/hero.jpg");}
+
+/* Hero de la page Numérique quantique (image de fond + voile sombre) */
+.sd-hero.hero-quantique{
+  background:#070b2b url("../images/numérique-quantique/illustration.jpg") center/cover no-repeat;
+}
+.sd-hero.hero-quantique::before{
+  background:linear-gradient(180deg,rgba(7,11,43,.55),rgba(7,11,43,.82));
+}
+
+/* Hero de la page Big Data (image de fond + voile sombre) */
+.sd-hero.hero-bigdata{
+  background:#0b1f33 url("../images/big data/illustration.jpg") center/cover no-repeat;
+}
+.sd-hero.hero-bigdata::before{
+  background:linear-gradient(180deg,rgba(11,31,51,.55),rgba(11,31,51,.82));
+}
 
 /* Encadré "Objectif" des axes */
 .axe-objectif{

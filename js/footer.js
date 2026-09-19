@@ -17,7 +17,7 @@
       <div class="col">
         <h4>Documents</h4>
         <ul>
-          <li><a href="docs/cv.pdf" target="_blank" rel="noopener">CV</a></li>
+          <li><a href="docs/cv.html" target="_blank" rel="noopener">CV</a></li>
           <li><a href="docs/synthese.pdf" target="_blank" rel="noopener">synthèse</a></li>
           <li><a href="docs/certification.pdf" target="_blank" rel="noopener">certification</a></li>
         </ul>
@@ -30,7 +30,10 @@
         </ul>
       </div>
     </div>
-    <div class="conteneur footer-bas">2025 T. Pichon - Etudiant en BTS SIO</div>`;
+    <div class="conteneur footer-bas">
+      <span>2025 T. Pichon - Etudiant en BTS SIO</span>
+      <span class="footer-credit">Illustrations Big&nbsp;Data : <a href="http://www.freepik.com" target="_blank" rel="noopener">Designed by macrovector / Freepik</a></span>
+    </div>`;
 
   const el = document.getElementById('site-footer') || document.querySelector('footer.footer');
   if (el) el.innerHTML = html;

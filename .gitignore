@@ -1,0 +1,8 @@
+# Sauvegardes des images originales (non compressées) — inutiles en ligne
+images/_originaux/
+images/**/_originaux/
+
+# Divers système / éditeur
+Thumbs.db
+desktop.ini
+.DS_Store

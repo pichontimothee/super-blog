@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le numérique quantique — Veille technologique</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-bigdata">
+
+  <!-- En-tete (injecté par js/header.js) -->
+  <header class="entete" id="site-header" data-title="LE NUMÉRIQUE QUANTIQUE" data-back="veille.html"></header>
+
+  <!-- Hero -->
+  <section class="sd-hero hero-quantique">
+    <div class="sd-hero-inner">
+      <span class="sd-kicker">🔍 Veille technologique</span>
+      <h1>Le numérique quantique</h1>
+      <p>Entre puissance de calcul, rupture cryptographique et souveraineté stratégique</p>
+      <div class="sd-meta">
+        <span>🧭 3 axes de surveillance</span>
+        <span>🗞️ Mise à jour : septembre 2026</span>
+        <span>🎓 BTS SIO (SISR / SLAM)</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="conteneur bd-main">
+
+    <!-- Introduction -->
+    <section class="bd-card">
+      <h2 class="bd-titre">Contexte &amp; introduction</h2>
+      <div class="bd-split">
+        <div>
+          <p>
+            L'informatique quantique s'appuie sur les propriétés de la <strong>mécanique quantique</strong>
+            — superposition, intrication et interférence — pour traiter l'information d'une manière
+            radicalement nouvelle. Là où l'informatique classique repose sur des <em>bits</em> qui valent
+            soit 0, soit 1, le processeur quantique manipule des <strong>qubits</strong>, capables de
+            représenter une combinaison de plusieurs états à la fois.
+          </p>
+          <p>
+            Cette approche promet de résoudre en quelques minutes certains calculs qui demanderaient des
+            milliers d'années aux supercalculateurs actuels : c'est ce que l'on appelle l'
+            <strong>avantage quantique</strong> (parfois « suprématie quantique »). Les applications visées
+            vont de la simulation de molécules à l'optimisation logistique, en passant par la finance.
+          </p>
+          <p>
+            Mais cette puissance a un revers. Elle impose des défis matériels majeurs — maintenir la
+            cohérence des qubits près du <strong>zéro absolu</strong> et corriger leurs erreurs — et,
+            surtout, elle <strong>menace directement les systèmes de chiffrement</strong> qui protègent
+            aujourd'hui Internet, imposant dès maintenant une transition vers la cryptographie
+            post-quantique.
+          </p>
+          <p>
+            Cette veille s'organise autour de <strong>trois axes de surveillance</strong> : l'architecture
+            matérielle et la correction d'erreurs, le risque cryptographique et la migration post-quantique,
+            puis les cas d'usage sectoriels et les enjeux de souveraineté.
+          </p>
+        </div>
+        <div class="bd-img">
+          <img src="images/numérique-quantique/frigo-dilution.jpg"
+               alt="Réfrigérateur à dilution refroidissant un processeur quantique">
+        </div>
+      </div>
+    </section>
+
+    <!-- AXE 1 -->
+    <section class="bd-card">
+      <span class="sd-badge">Axe 1</span>
+      <h2 class="bd-titre">Architecture matérielle &amp; correction d'erreurs (FTQC)</h2>
+      <div class="axe-objectif">
+        <strong>Objectif :</strong> suivre la transition des calculateurs quantiques « bruités » (ère NISQ)
+        vers des calculateurs <em>tolérants aux pannes</em> (Fault-Tolerant Quantum Computing, FTQC),
+        seuls capables d'exécuter des algorithmes utiles à grande échelle.
+      </div>
+
+      <h3 class="sd-sub">🌀 Superposition &amp; intrication</h3>
+      <p>
+        Deux phénomènes rendent le qubit si puissant. La <strong>superposition</strong> lui permet d'être
+        dans une combinaison des états 0 et 1 tant qu'on ne le mesure pas ; un ensemble de <em>n</em> qubits
+        peut ainsi explorer 2<sup>n</sup> combinaisons simultanément. L'<strong>intrication</strong> lie
+        plusieurs qubits de sorte que l'état de l'un dépend instantanément de celui des autres. Ensemble,
+        ces propriétés autorisent un parallélisme massif du traitement de l'information, hors de portée des
+        machines classiques.
+      </p>
+
+      <h3 class="sd-sub">❄️ Le bruit quantique &amp; la décohérence</h3>
+      <p>
+        Le talon d'Achille de la technologie est sa <strong>fragilité</strong>. Les qubits sont extrêmement
+        sensibles à leur environnement : la moindre variation de chaleur, une onde électromagnétique ou une
+        vibration suffit à détruire leur état — c'est la <strong>décohérence</strong>. Pour la limiter, la
+        plupart des machines (qubits supraconducteurs) doivent être refroidies par cryogénie à environ
+        <strong>−273 °C</strong>, à un cheveu du zéro absolu, ce qui explique leur coût et leur complexité
+        d'exploitation.
+      </p>
+
+      <h3 class="sd-sub">🧩 Qubits physiques vs qubits logiques</h3>
+      <p>
+        L'enjeu du moment ne se résume plus au nombre brut de <strong>qubits physiques</strong>
+        (les constructeurs annoncent désormais plus de 1 000 qubits). Le véritable défi est la création de
+        <strong>qubits logiques</strong> : on assemble des dizaines, voire des centaines de qubits physiques
+        et un code de correction d'erreurs pour former un seul qubit « idéal », stable et fiable. C'est le
+        passage à un nombre suffisant de qubits logiques qui marquera l'entrée dans l'ère du calcul
+        quantique <em>tolérant aux pannes</em>.
+      </p>
+    </section>
+
+    <!-- AXE 2 -->
+    <section class="bd-card">
+      <span class="sd-badge">Axe 2</span>
+      <h2 class="bd-titre">Risque cryptographique &amp; post-quantique (PQC)</h2>
+      <div class="axe-objectif">
+        <strong>Objectif :</strong> surveiller la menace que le quantique fait peser sur la sécurité
+        informatique et suivre la migration vers des algorithmes résistants aux attaques quantiques.
+      </div>
+
+      <h3 class="sd-sub">🔓 La menace : l'algorithme de Shor</h3>
+      <p>
+        Un ordinateur quantique suffisamment puissant, exécutant l'<strong>algorithme de Shor</strong>,
+        pourra casser en un temps très court les systèmes de chiffrement <strong>asymétrique</strong>
+        utilisés partout aujourd'hui — <strong>RSA</strong>, <strong>ECC</strong> et l'échange de clés
+        Diffie-Hellman. Or ce sont eux qui sécurisent le HTTPS, les VPN, la signature électronique, la
+        banque en ligne et une grande partie d'Internet. Leur remise en cause bouleverserait l'ensemble de
+        la sécurité des réseaux.
+      </p>
+
+      <div class="bd-img bd-img--small">
+        <img src="images/numérique-quantique/crypto-quantique.jpg"
+             alt="Cryptographie post-quantique — sécurité des données">
+      </div>
+
+      <h3 class="sd-sub">🕰️ « Harvest now, decrypt later »</h3>
+      <p>
+        La menace n'est pas seulement future. Selon la logique du « <strong>récolter maintenant, déchiffrer
+        plus tard</strong> », des attaquants interceptent et stockent <em>dès aujourd'hui</em> des données
+        confidentielles chiffrées, dans l'idée de les déchiffrer dans 5 à 10 ans, une fois la puissance
+        quantique disponible. Les informations à longue durée de vie (secrets d'État, données de santé,
+        propriété industrielle) sont donc déjà exposées, ce qui rend la migration urgente.
+      </p>
+
+      <h3 class="sd-sub">🛡️ La cryptographie post-quantique (PQC)</h3>
+      <p>
+        La réponse est la <strong>cryptographie post-quantique</strong> : de nouveaux algorithmes fondés sur
+        des problèmes mathématiques que même un ordinateur quantique ne sait pas résoudre efficacement,
+        comme le chiffrement sur <strong>réseaux euclidiens</strong>. En 2024, le <strong>NIST</strong> a
+        officialisé les premiers standards — <strong>ML-KEM</strong> (ex-Kyber) pour l'échange de clés et
+        <strong>ML-DSA</strong> (ex-Dilithium) pour la signature. L'enjeu pour les DSI est désormais l'
+        <strong>agilité cryptographique</strong> : être capable de remplacer progressivement les
+        certificats TLS, VPN et briques de sécurité par ces standards résistants.
+      </p>
+    </section>
+
+    <!-- AXE 3 -->
+    <section class="bd-card">
+      <span class="sd-badge">Axe 3</span>
+      <h2 class="bd-titre">Cas d'usage sectoriels &amp; souveraineté</h2>
+      <div class="axe-objectif">
+        <strong>Objectif :</strong> identifier les applications concrètes en entreprise et suivre les
+        stratégies d'investissement des États dans une technologie devenue géostratégique.
+      </div>
+
+      <h3 class="sd-sub">🏭 Des secteurs clés déjà en mouvement</h3>
+      <div class="bd-split">
+        <div>
+          <ul>
+            <li>
+              <strong>Chimie &amp; santé :</strong> simulation fine de molécules pour accélérer la découverte
+              de médicaments et concevoir de nouveaux matériaux (batteries, catalyseurs).
+            </li>
+            <li>
+              <strong>Finance &amp; logistique :</strong> optimisation de portefeuilles, calcul de risque et
+              résolution de problèmes d'optimisation complexes (type « voyageur de commerce » : tournées,
+              chaînes d'approvisionnement).
+            </li>
+            <li>
+              <strong>IA &amp; quantique (QML) :</strong> le <em>Quantum Machine Learning</em> explore
+              l'usage d'algorithmes quantiques pour accélérer certaines phases d'entraînement des modèles
+              d'IA.
+            </li>
+          </ul>
+        </div>
+        <div class="bd-img">
+          <img src="images/numérique-quantique/usage-quantique.jpg"
+               alt="Cas d'usage du numérique quantique">
+        </div>
+      </div>
+
+      <h3 class="sd-sub">🌍 Souveraineté &amp; géopolitique</h3>
+      <p>
+        Le quantique est devenu un terrain de <strong>compétition stratégique</strong> entre les
+        États-Unis, la Chine et l'Europe. Maîtriser cette technologie, c'est éviter une future dépendance
+        — tant sur le plan économique que sur celui de la sécurité, à cause du risque cryptographique. La
+        France a lancé une <strong>Stratégie nationale quantique</strong> (plan d'investissement de l'ordre
+        de 1,8 milliard d'euros), pendant que la Commission européenne coordonne ses propres initiatives
+        pour bâtir un écosystème souverain, du matériel au logiciel.
+      </p>
+    </section>
+
+    <!-- Focus actualites -->
+    <section class="bd-card">
+      <h2 class="bd-titre">Focus : 5 actualités récentes</h2>
+      <p>Tour d'horizon de faits marquants à suivre (exemples à actualiser au fil de la veille).</p>
+      <div class="actu-timeline">
+
+        <article class="actu-carte">
+          <h3>🔐 NIST : les standards post-quantiques passent en production</h3>
+          <p>Après la publication officielle des premiers standards de cryptographie post-quantique
+             (ML-KEM pour l'échange de clés, ML-DSA pour la signature), les éditeurs et les DSI entrent en
+             phase de déploiement. L'objectif : migrer les certificats TLS, les VPN et les briques de
+             sécurité vers des algorithmes résistants avant que la menace quantique ne se concrétise.</p>
+          <span class="actu-date">2026</span>
+        </article>
+
+        <article class="actu-carte">
+          <h3>🧩 Cap vers le calcul tolérant aux pannes (FTQC)</h3>
+          <p>IBM, Google et l'acteur français Quobly multiplient les démonstrations de <strong>qubits
+             logiques</strong> stables, avec des taux d'erreur en baisse. Ces avancées marquent le début du
+             passage de l'ère NISQ (machines bruitées) vers des calculateurs réellement tolérants aux
+             pannes, condition indispensable aux applications industrielles.</p>
+          <span class="actu-date">2026</span>
+        </article>
+
+        <article class="actu-carte">
+          <h3>☁️ Le quantique accessible via le cloud (QPaaS)</h3>
+          <p>Les puces quantiques deviennent accessibles à distance grâce aux offres hybrides d'AWS Braket,
+             d'Azure Quantum et de la plateforme française Scaleway / Pasqal. Cette démocratisation permet
+             aux développeurs et aux entreprises d'expérimenter sans posséder de matériel, en couplant
+             calcul classique et quantique.</p>
+          <span class="actu-date">2026</span>
+        </article>
+
+        <article class="actu-carte">
+          <h3>🇫🇷 Point d'étape sur le Plan quantique français</h3>
+          <p>La Stratégie nationale quantique (environ 1,8 milliard d'euros) se concrétise, notamment avec
+             le déploiement d'ordinateurs quantiques au TGCC (Très Grand Centre de calcul du CEA), afin de
+             rapprocher recherche et acteurs industriels et de renforcer la souveraineté technologique.</p>
+          <span class="actu-date">2026</span>
+        </article>
+
+        <article class="actu-carte">
+          <h3>⚠️ ANSSI : préparer l'agilité cryptographique</h3>
+          <p>L'ANSSI recommande aux organisations, en particulier aux Opérateurs d'Importance Vitale (OIV),
+             de réaliser un <strong>inventaire de leur agilité cryptographique</strong> : recenser où et
+             comment le chiffrement est utilisé, afin de planifier une migration progressive vers la
+             cryptographie post-quantique.</p>
+          <span class="actu-date">2026</span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Sources -->
+    <section class="bd-card">
+      <h2 class="bd-titre">Sources utilisées pour cette veille</h2>
+      <div class="sources-grille">
+        <div class="source-carte">
+          <h4>NIST</h4>
+          <p>Post-Quantum Cryptography Standardization — standards ML-KEM et ML-DSA</p>
+        </div>
+        <div class="source-carte">
+          <h4>ANSSI</h4>
+          <p>Avis scientifique et technique sur la migration vers la cryptographie post-quantique</p>
+        </div>
+        <div class="source-carte">
+          <h4>Ministère de l'Enseignement supérieur et de la Recherche</h4>
+          <p>Dossier de presse : la Stratégie nationale quantique</p>
+        </div>
+        <div class="source-carte">
+          <h4>IBM Quantum / Google Quantum AI</h4>
+          <p>Publications techniques sur la correction d'erreurs et les qubits logiques</p>
+        </div>
+        <div class="source-carte">
+          <h4>L'Usine Digitale / Le Monde Informatique</h4>
+          <p>Dossiers « Informatique quantique &amp; applications industrielles »</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="site-footer"></footer>
+  <script src="js/footer.js"></script>
+
+  <!-- Bouton retour en haut -->
+  <button id="backToTop" class="back-to-top" aria-label="Remonter en haut de page">↑</button>
+
+  <script src="js/header.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/scroll-top.js"></script>
+</body>
+</html>

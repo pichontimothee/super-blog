@@ -11,10 +11,25 @@
   <!-- En-tete (injecté par js/header.js) -->
   <header class="entete" id="site-header" data-title="LE BIG DATA" data-back="veille.html"></header>
 
+  <!-- Hero -->
+  <section class="sd-hero hero-bigdata">
+    <div class="sd-hero-inner">
+      <span class="sd-kicker">🔍 Veille technologique</span>
+      <h1>Le Big Data</h1>
+      <p>Volume, cloud et edge computing : gérer l'explosion des données</p>
+      <div class="sd-meta">
+        <span>📊 Les 3V : Volume · Variété · Vitesse</span>
+        <span>🗞️ Mise à jour : novembre 2024</span>
+        <span>🎓 BTS SIO</span>
+      </div>
+    </div>
+  </section>
+
   <main class="conteneur bd-main">
 
     <!-- Bloc 1 : intro + comparaison + 3V -->
     <section class="bd-card">
+      <h2 class="bd-titre">Contexte &amp; introduction</h2>
       <p>
         Les données sont des informations issues de diverses sources, tels que des
         personnes, des images, du texte, des capteurs et des sites web. Elles proviennent
@@ -72,6 +87,7 @@
 
     <!-- Bloc 2 : chiffres cles -->
     <section class="bd-card">
+      <h2 class="bd-titre">Des chiffres qui donnent le vertige</h2>
       <div class="bd-split">
         <div>
           <p>
@@ -96,6 +112,7 @@
 
     <!-- Bloc 3 : stockage + edge computing -->
     <section class="bd-card">
+      <h2 class="bd-titre">Stockage des données</h2>
       <p>
         Le Big Data est généralement stocké sur plusieurs serveurs, habituellement hébergés
         dans des data centers. Pour la sécurité, l'accessibilité et la redondance, les
@@ -103,7 +120,7 @@
         différents dans de nombreux data centers distincts.
       </p>
 
-      <h2 class="bd-titre">Edge computing</h2>
+      <h3 class="sd-sub">🌐 Edge computing</h3>
       <p>
         L'Edge computing est une architecture qui utilise les clients ou les appareils de
         « périphérie » des utilisateurs finaux pour réaliser une portion substantielle du
@@ -123,9 +140,97 @@
         Une fois que les données ont été préalablement traitées, elles sont souvent stockées à
         long terme, sauvegardées ou analysées plus en détail via le cloud.
       </p>
-      <div class="bd-img bd-img--large">
-        <img src="images/big data/edge_computing.png" alt="Schéma Data Center, Cloud et Edge Computing">
-      </div>
+      <figure class="edge-schema" aria-label="Schéma : du capteur au cloud, le principe de l'Edge computing">
+        <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Les objets et capteurs en périphérie génèrent les données ; l'Edge computing les prétraite au plus près de la source ; seules les données utiles sont envoyées vers le cloud et les data centers pour le stockage et l'analyse.">
+          <style>
+            .es-txt{font-family:'Segoe UI',Roboto,Arial,sans-serif;}
+            .es-head{fill:var(--texte);font-size:17px;font-weight:800;}
+            .es-title{fill:var(--texte);font-size:15px;font-weight:700;}
+            .es-sub{fill:var(--texte-doux);font-size:12px;}
+            .es-lbl{fill:var(--texte-doux);font-size:11.5px;font-weight:600;}
+            .es-arrow{stroke:var(--texte-doux);stroke-width:2;fill:none;}
+          </style>
+
+          <!-- Titre -->
+          <text class="es-txt es-head" x="380" y="28" text-anchor="middle">Du capteur au cloud : le principe de l'Edge computing</text>
+
+          <!-- Boîte 1 : Objets & capteurs -->
+          <g class="es-txt">
+            <rect x="30" y="56" width="200" height="176" rx="16" fill="rgba(91,155,213,.12)" stroke="rgba(91,155,213,.55)"/>
+            <rect x="30" y="56" width="200" height="6" rx="3" fill="#5b9bd5"/>
+            <!-- icône : objets connectés -->
+            <g stroke="#5b9bd5" stroke-width="2" fill="none">
+              <line x1="108" y1="108" x2="152" y2="120"/>
+              <line x1="152" y1="120" x2="120" y2="150"/>
+              <line x1="120" y1="150" x2="108" y2="108"/>
+            </g>
+            <circle cx="108" cy="108" r="8" fill="#5b9bd5"/>
+            <circle cx="152" cy="120" r="8" fill="#5b9bd5"/>
+            <circle cx="120" cy="150" r="8" fill="#5b9bd5"/>
+            <text class="es-title" x="130" y="188" text-anchor="middle">Objets &amp; capteurs</text>
+            <text class="es-sub" x="130" y="208" text-anchor="middle">Génèrent les données</text>
+            <text class="es-sub" x="130" y="224" text-anchor="middle">(périphérie du réseau)</text>
+          </g>
+
+          <!-- Flèche 1 -->
+          <g class="es-txt">
+            <path class="es-arrow" d="M232 150 H286"/>
+            <path class="es-arrow" d="M280 144 L288 150 L280 156"/>
+            <text class="es-lbl" x="259" y="140" text-anchor="middle">données</text>
+            <text class="es-lbl" x="259" y="172" text-anchor="middle">brutes</text>
+          </g>
+
+          <!-- Boîte 2 : Edge computing -->
+          <g class="es-txt">
+            <rect x="290" y="56" width="200" height="176" rx="16" fill="rgba(61,209,127,.12)" stroke="rgba(61,209,127,.6)"/>
+            <rect x="290" y="56" width="200" height="6" rx="3" fill="#3dd17f"/>
+            <!-- icône : puce -->
+            <g stroke="#2fae66" stroke-width="2" fill="none">
+              <rect x="367" y="100" width="46" height="46" rx="6" fill="rgba(61,209,127,.18)"/>
+              <rect x="379" y="112" width="22" height="22" rx="3"/>
+              <line x1="367" y1="112" x2="357" y2="112"/><line x1="367" y1="134" x2="357" y2="134"/>
+              <line x1="413" y1="112" x2="423" y2="112"/><line x1="413" y1="134" x2="423" y2="134"/>
+              <line x1="379" y1="100" x2="379" y2="90"/><line x1="401" y1="100" x2="401" y2="90"/>
+              <line x1="379" y1="146" x2="379" y2="156"/><line x1="401" y1="146" x2="401" y2="156"/>
+            </g>
+            <text class="es-title" x="390" y="188" text-anchor="middle">Edge computing</text>
+            <text class="es-sub" x="390" y="208" text-anchor="middle">Prétraitement au plus</text>
+            <text class="es-sub" x="390" y="224" text-anchor="middle">près de la source</text>
+          </g>
+
+          <!-- Flèche 2 -->
+          <g class="es-txt">
+            <path class="es-arrow" d="M492 150 H546"/>
+            <path class="es-arrow" d="M540 144 L548 150 L540 156"/>
+            <text class="es-lbl" x="519" y="140" text-anchor="middle">données</text>
+            <text class="es-lbl" x="519" y="172" text-anchor="middle">prétraitées</text>
+          </g>
+
+          <!-- Boîte 3 : Cloud & data centers -->
+          <g class="es-txt">
+            <rect x="550" y="56" width="200" height="176" rx="16" fill="rgba(245,166,35,.12)" stroke="rgba(245,166,35,.6)"/>
+            <rect x="550" y="56" width="200" height="6" rx="3" fill="#f5a623"/>
+            <!-- icône : nuage + serveurs -->
+            <path d="M628 116 a15 15 0 0 1 29 -4 a12 12 0 0 1 10 20 h-37 a13 13 0 0 1 -2 -16 z"
+                  fill="rgba(245,166,35,.18)" stroke="#e0902b" stroke-width="2"/>
+            <g fill="none" stroke="#e0902b" stroke-width="2">
+              <rect x="630" y="138" width="40" height="14" rx="3"/>
+              <rect x="630" y="156" width="40" height="14" rx="3"/>
+            </g>
+            <circle cx="638" cy="145" r="2.2" fill="#e0902b"/>
+            <circle cx="638" cy="163" r="2.2" fill="#e0902b"/>
+            <text class="es-title" x="650" y="196" text-anchor="middle">Cloud &amp; data centers</text>
+            <text class="es-sub" x="650" y="216" text-anchor="middle">Stockage long terme</text>
+            <text class="es-sub" x="650" y="232" text-anchor="middle">&amp; analyse</text>
+          </g>
+
+          <!-- Note bande passante -->
+          <text class="es-txt es-lbl" x="380" y="270" text-anchor="middle">
+            → moins de bande passante et de latence qu'un accès continu au cloud
+          </text>
+        </svg>
+      </figure>
     </section>
 
     <!-- Bloc 4 : cloud -->
