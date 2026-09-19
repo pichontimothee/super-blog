@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog de T. Pichon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -45,35 +48,76 @@
          concrets du secteur informatique.</p>
 
       <h3 class="apropos-sous">Mes compétences</h3>
-      <div class="competences">
-        <div class="skill">
-          <div class="label">base de donnée</div>
-          <div class="barre-zone">
-            <div class="barre"><span style="width:63%;background:var(--orange)"></span></div>
-            <div class="pct" style="left:63%;background:var(--orange)">63%</div>
+      <!-- Pour modifier une jauge : change UNIQUEMENT data-note (0 à 10).
+           L'anneau et le nombre se recalculent automatiquement (js/gauges.js). -->
+      <div class="gauges">
+
+        <div class="gauge" data-note="6.3">
+          <div class="gauge-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="g-track" cx="60" cy="60" r="52"></circle>
+              <circle class="g-fill" cx="60" cy="60" r="52" style="stroke:var(--orange)"></circle>
+            </svg>
+            <div class="g-val"><span class="g-num"></span></div>
           </div>
+          <div class="g-lbl">Bases de données</div>
         </div>
-        <div class="skill">
-          <div class="label">systèmes et réseaux</div>
-          <div class="barre-zone">
-            <div class="barre"><span style="width:94%;background:var(--vert)"></span></div>
-            <div class="pct" style="left:94%;background:var(--vert)">94%</div>
+
+        <div class="gauge" data-note="9.4">
+          <div class="gauge-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="g-track" cx="60" cy="60" r="52"></circle>
+              <circle class="g-fill" cx="60" cy="60" r="52" style="stroke:var(--vert)"></circle>
+            </svg>
+            <div class="g-val"><span class="g-num"></span></div>
           </div>
+          <div class="g-lbl">Systèmes &amp; réseaux</div>
         </div>
-        <div class="skill">
-          <div class="label">python</div>
-          <div class="barre-zone">
-            <div class="barre"><span style="width:72%;background:var(--bleu)"></span></div>
-            <div class="pct" style="left:72%;background:var(--bleu)">72%</div>
+
+        <div class="gauge" data-note="8.0">
+          <div class="gauge-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="g-track" cx="60" cy="60" r="52"></circle>
+              <circle class="g-fill" cx="60" cy="60" r="52" style="stroke:var(--bleu)"></circle>
+            </svg>
+            <div class="g-val"><span class="g-num"></span></div>
           </div>
+          <div class="g-lbl">Python</div>
         </div>
-        <div class="skill">
-          <div class="label">développement web</div>
-          <div class="barre-zone">
-            <div class="barre"><span style="width:32%;background:var(--violet)"></span></div>
-            <div class="pct" style="left:32%;background:var(--violet)">32%</div>
+
+        <div class="gauge" data-note="6.2">
+          <div class="gauge-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="g-track" cx="60" cy="60" r="52"></circle>
+              <circle class="g-fill" cx="60" cy="60" r="52" style="stroke:var(--violet)"></circle>
+            </svg>
+            <div class="g-val"><span class="g-num"></span></div>
           </div>
+          <div class="g-lbl">Développement web</div>
         </div>
+
+        <div class="gauge" data-note="6.4">
+          <div class="gauge-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="g-track" cx="60" cy="60" r="52"></circle>
+              <circle class="g-fill" cx="60" cy="60" r="52" style="stroke:#22d3ee"></circle>
+            </svg>
+            <div class="g-val"><span class="g-num"></span></div>
+          </div>
+          <div class="g-lbl">Linux</div>
+        </div>
+
+        <div class="gauge" data-note="5">
+          <div class="gauge-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="g-track" cx="60" cy="60" r="52"></circle>
+              <circle class="g-fill" cx="60" cy="60" r="52" style="stroke:#e05a6b"></circle>
+            </svg>
+            <div class="g-val"><span class="g-num"></span></div>
+          </div>
+          <div class="g-lbl">Maintenance</div>
+        </div>
+
       </div>
 
       <p class="aspirations"><strong>Mes aspirations professionnelles :</strong>
@@ -154,91 +198,80 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact (fenêtre terminal) -->
   <section class="contact-wrapper">
-    <div class="contact-section">
-      <!-- En-tête -->
-      <div class="contact-header">
-        <h1>💬 Me Contacter</h1>
-        <p>Une question ? Un projet ? N'hésitez pas à me contacter !</p>
+    <div class="terminal">
+
+      <!-- Barre de la fenêtre -->
+      <div class="term-bar">
+        <span class="term-dot term-dot--r"></span>
+        <span class="term-dot term-dot--y"></span>
+        <span class="term-dot term-dot--g"></span>
+        <span class="term-title">timothee@blog: ~/contact</span>
       </div>
 
-      <!-- Contenu -->
-      <div class="contact-content">
+      <!-- Corps -->
+      <div class="term-body">
+        <p class="term-prompt"><span class="term-user">visiteur@blog</span>:<span class="term-path">~</span>$ ./contacter --message</p>
+        <p class="term-comment"># Une question, un projet, une opportunité de stage ? Écrivez-moi.</p>
 
-        <!-- Formulaire -->
-        <div class="contact-form">
-          <form id="contactForm">
+        <div class="term-grid">
+
+          <!-- Formulaire -->
+          <form id="contactForm" class="contact-form">
 
             <!-- Web3Forms : clé d'accès (envoi de l'email de contact) -->
             <input type="hidden" name="access_key" value="362b984b-9e9e-453b-bf73-674d86669854">
 
             <div class="form-group">
-              <label for="name">Nom complet</label>
-              <input type="text" id="name" name="name" placeholder="Votre nom" required>
+              <label for="name">nom</label>
+              <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
             </div>
 
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+              <label for="email">email</label>
+              <input type="email" id="email" name="email" placeholder="jean.dupont@exemple.com" required>
             </div>
 
             <div class="form-group">
-              <label for="subject">Sujet</label>
-              <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required>
+              <label for="subject">sujet</label>
+              <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
             </div>
 
             <div class="form-group">
-              <label for="message">Message</label>
+              <label for="message">message</label>
               <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Envoyer le message</button>
+            <button type="submit" class="submit-btn">[ ENVOYER LE MESSAGE ]</button>
 
             <div class="success-message" id="successMessage">
-              ✓ Message envoyé avec succès ! Je vous répondrai rapidement.
+              ✓ Message envoyé — je vous répondrai rapidement.
             </div>
 
           </form>
-        </div>
 
-        <!-- Informations de contact -->
-        <div class="contact-info">
+          <!-- Coordonnées : sortie console -->
+          <div class="contact-info">
+            <p class="term-comment"># cat coordonnees.txt</p>
 
-          <div class="contact-item">
-            <div class="contact-icon">📧</div>
-            <div class="contact-details">
-              <h3>Email</h3>
-              <p><a href="mailto:pichontimothee@gmail.com">pichontimothee@gmail.com</a></p>
+            <a class="term-line" href="mailto:pichontimothee@gmail.com">
+              <span class="term-key">email</span><span class="term-arrow">➜</span>pichontimothee@gmail.com
+            </a>
+            <a class="term-line" href="https://www.linkedin.com/in/timothee-pichon-823b09297/" target="_blank" rel="noopener">
+              <span class="term-key">linkedin</span><span class="term-arrow">➜</span>timothee-pichon
+            </a>
+            <a class="term-line" href="https://github.com/pichontimothee" target="_blank" rel="noopener">
+              <span class="term-key">github</span><span class="term-arrow">➜</span>pichontimothee
+            </a>
+            <div class="term-line term-line--static">
+              <span class="term-key">lieu</span><span class="term-arrow">➜</span>Saint-Étienne-de-Montluc, Nantes
             </div>
-          </div>
 
-          <div class="contact-item">
-            <div class="contact-icon">💼</div>
-            <div class="contact-details">
-              <h3>LinkedIn</h3>
-              <p><a href="https://www.linkedin.com/in/timothee-pichon-823b09297/" target="_blank">linkedin.com/in/timothee-pichon</a></p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">💻</div>
-            <div class="contact-details">
-              <h3>GitHub</h3>
-              <p><a href="https://github.com/pichontimothee" target="_blank">github.com/pichontimothee</a></p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">📍</div>
-            <div class="contact-details">
-              <h3>Localisation</h3>
-              <p>Saint-Étienne-de-Montluc, Nantes</p>
-            </div>
+            <p class="term-cursor">visiteur@blog:~$ <span class="blink">▮</span></p>
           </div>
 
         </div>
-
       </div>
     </div>
   </section>
@@ -254,6 +287,7 @@
   <script src="js/theme.js"></script>
   <script src="js/documents.js"></script>
   <script src="js/contact.js"></script>
+  <script src="js/gauges.js"></script>
   <script src="js/scroll-top.js"></script>
 </body>
 </html>

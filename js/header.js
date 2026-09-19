@@ -23,8 +23,36 @@
     <div class="conteneur">
       ${gauche}
       <nav class="nav">
-        <a href="veille.html">Veille</a>
-        <a href="stage.html">Stages</a>
+
+        <div class="nav-drop">
+          <a href="veille.html" class="nav-lien">Veille <span class="caret">▾</span></a>
+          <div class="nav-menu">
+            <a href="veille.html">Toutes les veilles</a>
+            <a href="big-data.html">Big Data</a>
+            <a href="quantique.html">Numérique quantique</a>
+          </div>
+        </div>
+
+        <div class="nav-drop">
+          <a href="stage.html" class="nav-lien">Stages <span class="caret">▾</span></a>
+          <div class="nav-menu">
+            <a href="stage.html">Tous les stages</a>
+            <a href="stage-soloc.html">Soloc Rabotage</a>
+            <a href="stage-sca-ouest.html">SCA Ouest</a>
+            <a href="stage-duqueine.html">Duqueine</a>
+          </div>
+        </div>
+
+        <div class="nav-drop">
+          <span class="nav-lien" tabindex="0" role="button" aria-haspopup="true">Projets <span class="caret">▾</span></span>
+          <div class="nav-menu">
+            <span class="nav-menu-item disabled">ParcSync <em>bientôt</em></span>
+            <span class="nav-menu-item disabled">Lab réseau perso <em>bientôt</em></span>
+            <span class="nav-menu-item disabled">GSB – Infra réseau <em>bientôt</em></span>
+            <span class="nav-menu-item disabled">Blog tech <em>bientôt</em></span>
+          </div>
+        </div>
+
         <a href="index.html" class="btn-noir">Accueil</a>
         <button id="themeToggle" class="theme-toggle" aria-label="Basculer le mode sombre">🌙</button>
       </nav>
