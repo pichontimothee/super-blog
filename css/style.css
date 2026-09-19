@@ -577,6 +577,21 @@ body.dark.page-bigdata{background:#0f1115;}
 .actu-carte p{font-size:1rem;color:var(--texte-doux);margin-bottom:14px;}
 .actu-date{font-size:.85rem;font-weight:700;color:var(--texte-doux);}
 
+/* Encadré "Focus entreprise" (ex. Pasqal) */
+.focus-entreprise{
+  margin-top:26px;padding:22px 26px;
+  background:linear-gradient(135deg,rgba(102,126,234,.12),rgba(123,91,182,.12));
+  border:1px solid rgba(102,126,234,.35);border-left:4px solid #667eea;
+  border-radius:0 14px 14px 0;
+}
+.focus-tag{
+  display:inline-block;margin-bottom:10px;
+  font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
+  color:#fff;background:#667eea;padding:4px 12px;border-radius:20px;
+}
+.focus-entreprise h4{font-size:1.25rem;margin-bottom:10px;color:var(--texte);}
+.focus-entreprise p{margin:0;color:var(--texte);line-height:1.7;}
+
 /* Sources */
 .sources-grille{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px;}
 .source-carte{background:var(--surface-2);border-radius:12px;padding:20px;text-align:center;}
