@@ -4,69 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mes stages - T. Pichon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Réutilise le thème/chrome de l'accueil (header, footer, flèche, reveals) -->
+  <link rel="stylesheet" href="css/accueil.css">
+  <link rel="stylesheet" href="css/stage.css">
 </head>
-<body>
+<!-- .page-accueil = chrome commun · .page-stage = ambiance propre -->
+<body class="page-accueil page-stage">
 
-  <!-- En-tete (injecté par js/header.js) -->
+  <!-- En-tete (identique au thème, injecté par js/header.js) -->
   <header class="entete" id="site-header" data-title="MES STAGES" data-back="index.html"></header>
 
-  <!-- Bloc intro (fond art abstrait flouté) -->
-  <section class="stage-hero-wrap">
-    <div class="conteneur">
-      <div class="stage-hero">
-        <p class="stage-hero-texte">
-          De la théorie à la pratique : mes stages m'ont permis de confronter mes
-          connaissances aux défis concrets de l'informatique en entreprise.
-          Trois expériences enrichissantes qui ont façonné mon parcours et renforcé
-          mes compétences techniques.
-        </p>
+  <!-- ===================== HERO (DA blur adaptée) ===================== -->
+  <section class="st-hero">
+    <div class="st-hero__inner">
+      <p class="st-eyebrow" data-reveal><b>Stages</b><span></span> De la théorie à la pratique</p>
+      <h1 data-reveal style="--d:80ms">Mes stages en <em>entreprise</em></h1>
+      <p class="st-lede" data-reveal style="--d:160ms">
+        Mes stages m'ont permis de confronter mes connaissances aux défis concrets de
+        l'informatique en entreprise. Trois expériences enrichissantes qui ont façonné mon
+        parcours et renforcé mes compétences techniques.
+      </p>
+      <div class="st-meta" data-reveal style="--d:240ms">
+        <span class="on">3 expériences</span>
+        <span>Soloc Rabotage</span>
+        <span>SCA Ouest</span>
+        <span>Duqueine</span>
       </div>
     </div>
   </section>
 
-  <!-- Les 3 stages -->
-  <section class="section">
-    <div class="conteneur">
-      <div class="stages-grille">
+  <!-- ===================== Timeline du parcours ===================== -->
+  <section class="st-timeline">
 
-        <a class="stage-carte" href="stage-soloc.html">
-          <div class="stage-media">
-            <img src="images/soloc.png" alt="Logo Groupe SOLOC">
-          </div>
-          <h3>Soloc rabotage</h3>
-          <p>Effectuer en seconde SN</p>
-        </a>
-
-        <a class="stage-carte" href="stage-sca-ouest.html">
-          <div class="stage-media stage-media--photo">
-            <img src="images/sca_ouest.jpg" alt="Locaux de SCA Ouest">
-          </div>
-          <h3>SCA Ouest</h3>
-          <p>Effectuer en première SN et première année de BTS SIO</p>
-        </a>
-
-        <a class="stage-carte" href="stage-duqueine.html">
-          <div class="stage-media">
-            <img src="images/duqueine.png" alt="Logo Duqueine">
-          </div>
-          <h3>Duqueine</h3>
-          <p>Effectuer en terminal SN</p>
-        </a>
-
-      </div>
+    <!-- 01 -->
+    <div class="st-step" data-reveal>
+      <div class="st-node">01</div>
+      <a class="st-card" href="stage-soloc.html">
+        <div class="st-logo"><img src="images/soloc.png" alt="Logo Groupe SOLOC"></div>
+        <div class="st-info">
+          <span class="st-period">Seconde SN</span>
+          <h2>Soloc Rabotage</h2>
+          <p>Première immersion en entreprise, réalisée en seconde SN.</p>
+          <span class="st-go">Voir le stage <span class="fl">↗</span></span>
+        </div>
+      </a>
     </div>
+
+    <!-- 02 -->
+    <div class="st-step" data-reveal style="--d:80ms">
+      <div class="st-node">02</div>
+      <a class="st-card" href="stage-sca-ouest.html">
+        <div class="st-logo st-logo--photo"><img src="images/sca_ouest.jpg" alt="Locaux de SCA Ouest"></div>
+        <div class="st-info">
+          <span class="st-period">1re SN · 1re année BTS SIO</span>
+          <h2>SCA Ouest</h2>
+          <p>Réalisé en première SN puis en première année de BTS SIO.</p>
+          <span class="st-go">Voir le stage <span class="fl">↗</span></span>
+        </div>
+      </a>
+    </div>
+
+    <!-- 03 -->
+    <div class="st-step" data-reveal style="--d:160ms">
+      <div class="st-node">03</div>
+      <a class="st-card" href="stage-duqueine.html">
+        <div class="st-logo"><img src="images/duqueine.png" alt="Logo Duqueine"></div>
+        <div class="st-info">
+          <span class="st-period">Terminale SN</span>
+          <h2>Duqueine</h2>
+          <p>Réalisé en terminale SN.</p>
+          <span class="st-go">Voir le stage <span class="fl">↗</span></span>
+        </div>
+      </a>
+    </div>
+
   </section>
 
-  <!-- Footer -->
+  <!-- Footer (identique au thème) -->
   <footer class="footer" id="site-footer"></footer>
   <script src="js/footer.js"></script>
 
-  <!-- Bouton retour en haut -->
+  <!-- Bouton retour en haut (nouveau design, hérité du thème) -->
   <button id="backToTop" class="back-to-top" aria-label="Remonter en haut de page">↑</button>
 
   <script src="js/header.js"></script>
-  <script src="js/theme.js"></script>
   <script src="js/scroll-top.js"></script>
+  <script src="js/accueil.js"></script>
 </body>
 </html>

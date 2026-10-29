@@ -1,0 +1,79 @@
+{
+  "page": "quantique",
+  "titre": "Le numérique quantique",
+  "derniereMaj": "2026-10-03T16:13:29.414Z",
+  "axes": [
+    {
+      "id": "axe1",
+      "numero": "Axe 1",
+      "titre": "Architecture matérielle &amp; correction d'erreurs (FTQC)",
+      "objectif": "suivre la transition des calculateurs quantiques « bruités » (ère NISQ) vers des calculateurs tolérants aux pannes (FTQC).",
+      "image": "images/numérique-quantique/reseau-point-lumineux.jpg",
+      "horodatage": "2026-10-03T16:13:29.414Z",
+      "blocs": [
+        {
+          "type": "section",
+          "sousTitre": "🧊 Pasqal : l’ordinateur quantique à atomes piégés en France",
+          "texte": "<p>Pasqal, l’entreprise française de l’ordinateur quantique, a dévoilé son usine où l’on combine <strong>lasers</strong>, <strong>super-congélateurs</strong> et <strong>atomes piégés dans le vide</strong> pour créer des qubits à base d’atomes froids. Cette approche, appelée <strong>quantique à atomes piégés</strong>, se distingue des puces à supraconducteurs en offrant une meilleure isolation thermique et une décohérence plus faible, mais elle reste très sensible aux vibrations et à la stabilité de la température.</p><p>Le défi majeur est de maintenir les atomes à des températures proches du zéro absolu tout en les contrôlant avec précision. Si Pasqal parvient à stabiliser ces systèmes, cela pourrait ouvrir la voie à des <strong>architectures matérielles</strong> plus robustes et à des <strong>protocoles de correction d’erreurs</strong> adaptés aux qubits à atomes, un pas important vers la <strong>FTQC</strong> (quantique à correction d’erreurs).",
+          "source": "BFM",
+          "url": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxONjRuMTJneEUyNWRGcm1DM1M5cHY4SndGSElZNWFDOVhaSjhMZWpOTGx3R3FJeTlmTnhsTktQZEhsU25iSVdDZF9lREU3dmFjVHI0ZjI3ODJBM0tYRkNja09yYUxXYTBBSElRMURBTlJrT0JHRElvZEhlZjNlVTJFVVN1LVRUUi04OEtJMDBsNmctY3pPX1lpbDJhbUczZTFFM0ZUT0h3SVhaclJVX0ltUUFQeml2dTA1XzhfSEJTRVk0M0w4anZNTlVXUFpyWmt1dEt2d181RjY1bk1pelZSSkRJdjNlNWppaHhLVFJzVFJnaDRSU09uZGxBS0MzSU14VkpoUExjbXdpelNtNWpRWlVZc2NmbFN0WGxrcy0tUHFLTUxuSmJPdjJnc1dEQUdHY1BUUHhWTUxIZExRMWM3d2tyNkRxY3BTLWk1UVRMSVh4WUF5VDNURDNHUFUxdkhLd1lIYWlOWFpTVFE"
+        },
+        {
+          "type": "section",
+          "sousTitre": "🚀 Un processeur quantique photonique en orbite terrestre",
+          "texte": "<p>Le premier <strong>processeur quantique photonique</strong> a été mis en service en orbite terrestre, marquant une étape clé pour la <strong>quantique en espace</strong>. Contrairement aux qubits supraconducteurs, les qubits photoniques utilisent des photons, ce qui les rend naturellement moins sensibles à la décohérence thermique. Cependant, ils nécessitent des dispositifs optiques très précis et une gestion rigoureuse de la phase.</p><p>Cette réalisation ouvre la perspective de réseaux quantiques interplanétaires, où les photons serviraient de porteuses d’information entre les satellites et les stations au sol. Pour les étudiants BTS SIO, cela illustre comment la <strong>technologie quantique</strong> peut dépasser les limites terrestres et nécessiter des protocoles de <strong>correction d’erreurs</strong> adaptés aux contraintes spatiales.",
+          "source": "KultureGeek",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPMlpCVHJjY1VGdEp1dmd6Nm9OM3JCdVpXcW9EdkVTT0lVa1dNcVdOYXY5enVuSnJWVGhPZGxBTENuaG55LXZZVmhsX0FYcG1vRVc3cjJEczRpR0pqZFJmSUtzSFBBYXJ6TGpVMVViUmFOX1RwNnFaMFVKemRmWDBJWGlsaXdMRkxEbmdyWkVkUEh0S3VzNFItN2Zna1BQdmp3dkNTN21n"
+        }
+      ]
+    },
+    {
+      "id": "axe2",
+      "numero": "Axe 2",
+      "titre": "Risque cryptographique &amp; post-quantique (PQC)",
+      "objectif": "surveiller la menace quantique sur la sécurité et suivre la migration vers des algorithmes résistants.",
+      "image": "images/numérique-quantique/crypto-quantique.jpg",
+      "horodatage": "2026-10-03T16:13:29.414Z",
+      "blocs": [
+        {
+          "type": "section",
+          "sousTitre": "🔐 IBM prouve la supériorité du quantique sur un problème classique",
+          "texte": "<p>IBM a démontré qu’un de ses ordinateurs quantiques pouvait résoudre un problème de factorisation en <strong>19 secondes</strong>, alors qu’un superordinateur classique mettrait plus de <strong>110 ans</strong>. Ce résultat, bien que limité à un problème spécifique, illustre le potentiel de l’algorithme de <strong>Shor</strong> pour casser les systèmes de chiffrement RSA, qui reposent sur la difficulté de la factorisation.</p><p>Pour les étudiants, cela souligne l’urgence de développer des <strong>algorithmes post-quantiques</strong> (PQC) et de suivre les recommandations de <strong>NIST</strong> et <strong>ANSSI</strong>. Les entreprises et les administrations devront migrer vers des protocoles résistants aux attaques quantiques pour garantir la sécurité des données.",
+          "source": "ZDNET",
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPRzYxYllQWmR4U1R3dDdpOVcwb3Y0MzItM0pzaEFlV01iZThXLTE0dVFrUFFUeFpyeTZLbDJOWGFRcE5lenhVRmpocWNsZ0hGYWxRV3ItNUNFbGZkM3VtZm1kTGRwSThKdEpjOEpJNWFjcmhWUHJCUHpqNERBZTlWYTVSdTJUX3FiNXdZYm40MWRBdmlpdUZLX1JYUkJDblk0a3l3eF9qWWNiTTZsT0RibEwwU2R0SENCUjljTzJ5d2NqQTBfajZNYkhhWXU1aGEzSXlmVHI2eWVCYVFLTEpubg"
+        },
+        {
+          "type": "section",
+          "sousTitre": "🔒 Le NEDO soutient la recherche quantique pour l’immunothérapie",
+          "texte": "<p>Le programme de la <strong>NEDO</strong> (Japan Science and Technology Agency) a retenu un projet conjoint dirigé par NEC visant à appliquer l’informatique quantique à l’immunothérapie anticancéreuse. L’idée est d’utiliser la puissance de calcul quantique pour simuler des interactions moléculaires complexes, accélérant ainsi la découverte de nouveaux traitements.</p><p>Cette initiative montre que le <strong>risque cryptographique</strong> n’est pas le seul domaine où le quantique est exploité. Les algorithmes quantiques peuvent également révolutionner la <strong>biotechnologie</strong>, en offrant des modèles plus précis que les simulations classiques. Pour les étudiants, cela illustre l’interdisciplinarité du numérique quantique et la nécessité de maîtriser à la fois les bases physiques et les applications sectorielles.",
+          "source": "Zonebourse Suisse",
+          "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOVGZzU0RUZ0xVWHpWMkNWZ29WNlRwbmtvVlUzUHh3OE55czlad1FUdjJfYXJtcUZRNDZTUW9EMHd1Smxoblk0Z1FsbWVPVDNXR1JoNlBmWk5WRjZlbkFwaTR4S0FOMmp6RjVCdC11VW15MVdZa3YxMmsxNWpWOTlRQjdTRy12ekhOaTV5V0xvVkhnZGZ0Zk5NeWVEWXFId3VhTmxiSjZQTlJGR1RHM3JNeDI5OU1ra29VczhlcklWcXJyd1MxbkZTVmZtLXhzWTc2QmZSLUhmcExLYUJ4UHBYdUNBaUhBM1p1clJtMHVNbw"
+        }
+      ]
+    },
+    {
+      "id": "axe3",
+      "numero": "Axe 3",
+      "titre": "Cas d'usage sectoriels &amp; souveraineté",
+      "objectif": "identifier les applications concrètes en entreprise et suivre les stratégies d'investissement des États.",
+      "image": "images/numérique-quantique/usage-quantique.jpg",
+      "horodatage": "2026-10-03T16:13:29.414Z",
+      "blocs": [
+        {
+          "type": "section",
+          "sousTitre": "🛡️ Thales et C12 : le quantique pour la défense contre les drones",
+          "texte": "<p>Thales et l’entreprise C12 développent des algorithmes quantiques pour améliorer le suivi des cibles radar, afin de contrer les attaques massives de drones. En combinant <strong>quantum annealing</strong> et <strong>algorithmes de recherche quantique</strong>, ils visent à accélérer la détection et le filtrage des signaux radar, réduisant le temps de réaction des systèmes de défense.</p><p>Cette application illustre la <strong>souveraineté numérique</strong> : les États cherchent à maîtriser des technologies critiques pour la sécurité nationale. Pour les étudiants, comprendre comment le quantique peut renforcer les systèmes de défense offre un aperçu des enjeux géopolitiques et de la nécessité de compétences en <strong>algorithmique quantique</strong> et en <strong>cyber‑défense</strong>.",
+          "source": "L'Usine Nouvelle",
+          "url": "https://news.google.com/rss/articles/CBMi-AJBVV95cUxQb2l4ZTJQdWdENjhqbHpfd2JUMkhrX1BnMnNlVDAzWV8xVFVZS0ttSDBaZTA5VXdha1RiTTRlbng1dkduMWd3WHE5YWNlT0FlSGxaVExpMVhFalBlQ1BRanl1THBGTjViOFg4c2RyTm1TQ3hVclZSZTdySEZIWExBbEpqOFBIems3ZGUxc2VmNmZtUDRuNnMxbjlLY21yenYtZ2pjYmhnUHo4T010bGxFYWNGQ3ltbXZLckZzR0lqVjRMWVJSRDFPUWdweGRCN3dIWEVWQWF4ZlBDZ2ppbF8zMU01ZkhWaFlUVk5IWWd4TUFEczVzckthSGtkLUNkbG9TZng0VmtLNDFEQkJld2VGdk9wVF9rWnZhZEVZRmtBT2o0eVNYUVBEekNmaGN6T3psbm4yNHdHYl9vYW41YWJfaHVGbnhyYnpsZFJyZUZxc19WeV83SFROUFRyYXRSVlktb2lwWVBKZmFFM05lQU90TEh0UFVXbGV5"
+        },
+        {
+          "type": "section",
+          "sousTitre": "🌐 L’ordinateur quantique en espace : un pas vers la souveraineté numérique",
+          "texte": "<p>Le premier ordinateur quantique a fonctionné dans l’espace, comme le rapportent Futura et Génération NT. Bien que les performances aient été limitées, cette démonstration prouve la <strong>résilience du quantique en environnement spatial</strong> et ouvre la voie à des réseaux quantiques interplanétaires.</p><p>Pour les pays, disposer d’une infrastructure quantique hors de portée des adversaires est un atout stratégique. Cela renforce la <strong>souveraineté numérique</strong> et permet de sécuriser les communications critiques. Les étudiants BTS SIO doivent comprendre que le quantique ne se limite pas aux laboratoires terrestres : il s’étend aux satellites, aux réseaux et aux enjeux géopolitiques.",
+          "source": "Futura",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSExsUW84Z3p0anBrbXhUdjRaNTZYazBGaG9tWjJtNkNsam4xMUNmOFpITEo2WHBJU1BlNTNQUHhtMER4SVQ3Rk94eVhTR2l6cXlTLVhCczNtYVRtdVR2ZlFKZTR6cXdEeWNyb1FjQjBYd0hZZzZFUnhjY3dJbWZKMDU2UjZMclZCTnNrZjdudm1aOHpmTkV3WW9XOV93SERidWtqMnVkVjJGdlpGQWU0TDIzODhHUQ"
+        }
+      ]
+    }
+  ]
+}

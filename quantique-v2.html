@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le numérique quantique — Veille technologique (auto)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-bigdata">
+
+  <!-- En-tete (injecté par js/header.js) -->
+  <header class="entete" id="site-header" data-title="LE NUMÉRIQUE QUANTIQUE" data-back="veille.html"></header>
+
+  <!-- Hero -->
+  <section class="sd-hero hero-quantique">
+    <div class="sd-hero-inner">
+      <span class="sd-kicker">🔍 Veille technologique</span>
+      <h1>Le numérique quantique</h1>
+      <p>Entre puissance de calcul, rupture cryptographique et souveraineté stratégique</p>
+      <div class="sd-meta">
+        <span>🧭 3 axes de surveillance</span>
+        <span id="rapports-maj">🗞️ Mise à jour : septembre 2026</span>
+        <span>🎓 BTS SIO (SISR / SLAM)</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="conteneur bd-main">
+
+    <!-- Présentation (FIXE — ne change pas d'un run à l'autre) -->
+    <section class="bd-card">
+      <h2 class="bd-titre">Présentation</h2>
+      <div class="bd-split">
+        <div>
+          <p>
+            L'informatique quantique exploite les propriétés de la <strong>mécanique quantique</strong>
+            (superposition, intrication) pour traiter l'information autrement : au lieu de <em>bits</em>
+            valant 0 ou 1, elle manipule des <strong>qubits</strong> capables de représenter plusieurs
+            états à la fois — ce qui ouvre la voie à une puissance de calcul inédite, mais fragile et
+            porteuse de nouveaux risques pour la sécurité.
+          </p>
+          <p>
+            Cette page de veille suit le sujet selon <strong>trois axes</strong> : l'architecture matérielle
+            et la correction d'erreurs, le risque cryptographique et la migration post-quantique, puis les
+            cas d'usage sectoriels et la souveraineté. Le contenu de ces axes est
+            <strong>mis à jour en continu</strong> ; cette présentation, elle, reste fixe.
+          </p>
+        </div>
+        <div class="bd-img">
+          <img src="images/numérique-quantique/frigo-dilution.jpg"
+               alt="Réfrigérateur à dilution refroidissant un processeur quantique">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         AXES DYNAMIQUES — générés par js/axes.js à partir du JSON.
+         Source des données : data/quantique/veille.json
+         (c'est ce contenu que n8n mettra à jour automatiquement)
+         ================================================================ -->
+    <div id="axes-conteneur" data-src="data/quantique/veille.json">
+      <section class="bd-card"><p class="actu-chargement">Chargement des axes de veille…</p></section>
+    </div>
+
+    <!-- Sources (dynamiques — alimentées par js/axes.js à partir des blocs) -->
+    <section class="bd-card">
+      <h2 class="bd-titre">Sources utilisées pour cette veille</h2>
+      <div class="sources-grille" id="sources-grille">
+        <p class="actu-chargement">Chargement des sources…</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="site-footer"></footer>
+  <script src="js/footer.js"></script>
+
+  <!-- Bouton retour en haut -->
+  <button id="backToTop" class="back-to-top" aria-label="Remonter en haut de page">↑</button>
+
+  <script src="js/header.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/scroll-top.js"></script>
+  <script src="js/axes.js"></script>
+</body>
+</html>

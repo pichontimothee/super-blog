@@ -4,63 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mes veilles - T. Pichon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Réutilise le thème/chrome de l'accueil (header, footer, flèche, reveals) -->
+  <link rel="stylesheet" href="css/accueil.css">
+  <link rel="stylesheet" href="css/veille.css">
 </head>
-<body>
+<!-- .page-accueil = chrome commun (header/footer/flèche/pas de thème) · .page-veille = ambiance propre -->
+<body class="page-accueil page-veille">
 
-  <!-- En-tete (injecté par js/header.js) -->
+  <!-- En-tete (identique au thème, injecté par js/header.js) -->
   <header class="entete" id="site-header" data-title="MES VEILLES" data-back="index.html"></header>
 
-  <!-- Intro -->
-  <section class="section veille-intro">
-    <div class="conteneur">
-      <p>
+  <!-- ===================== HERO / intro ===================== -->
+  <section class="vl-hero">
+    <div class="vl-hero__inner">
+      <p class="vl-eyebrow" data-reveal><b>Veille</b><span></span> Suivi des innovations</p>
+      <h1 data-reveal style="--d:80ms">Veille <em>technologique</em></h1>
+      <p class="vl-lede" data-reveal style="--d:160ms">
         La veille technologique consiste à se tenir informé en permanence des évolutions,
-        innovations et nouvelles pratiques dans un domaine donné.<br>
-        Elle permet d'anticiper les changements, d'enrichir ses compétences et de rester à
-        jour face aux technologies en constante évolution.<br>
-        Dans ce blog, je présente deux veilles technologiques, l'une sur le numérique
-        quantique et une autre sur le Big DATA.
+        innovations et nouvelles pratiques dans un domaine donné. Elle permet d'anticiper les
+        changements, d'enrichir ses compétences et de rester à jour face aux technologies en
+        constante évolution. Je présente ici deux veilles : le numérique quantique et le Big Data.
       </p>
+      <div class="vl-meta" data-reveal style="--d:240ms">
+        <span class="on">02 veilles</span>
+        <span>Big Data</span>
+        <span>Numérique quantique</span>
+      </div>
     </div>
   </section>
 
-  <!-- Veille Big Data -->
-  <section class="section veille-bloc">
-    <div class="conteneur">
-      <div class="veille-img">
+  <!-- ===================== Les deux veilles ===================== -->
+  <section class="vl-feature">
+
+    <!-- Big Data -->
+    <article class="vl-card" data-reveal>
+      <div class="vl-card__media">
         <img src="images/big data/big_data.jpg" alt="Illustration Big Data">
       </div>
-      <div class="veille-texte">
+      <div class="vl-card__body">
+        <span class="vl-num">01</span>
+        <span class="vl-kicker">Donnée · Infrastructure · Décision</span>
+        <h2>Big Data</h2>
         <p>
           Le Big Data désigne l'ensemble des technologies permettant de collecter, stocker
-          et analyser de très grandes quantités de données issues de sources variées.
+          et analyser de très grandes quantités de données issues de sources variées. Il est
+          utilisé pour transformer ces données en informations utiles afin d'aider à la prise
+          de décision, d'optimiser des services ou de prévoir des comportements.
         </p>
         <p>
-          Il est utilisé pour transformer ces données en informations utiles afin d'aider à
-          la prise de décision, d'optimiser des services ou de prévoir des comportements.<br>
-          Le Big Data est devenu essentiel dans de nombreux domaines comme l'informatique,
-          les réseaux, le commerce ou la santé.
+          Devenu essentiel dans de nombreux domaines (informatique, réseaux, commerce, santé),
+          sa mise en œuvre reste complexe : volumes importants, infrastructures nécessaires,
+          compétences techniques, et enjeux de sécurité et de protection des données personnelles.
         </p>
-        <p>
-          Cependant, sa mise en œuvre est complexe en raison des volumes importants de données,
-          des infrastructures nécessaires et des compétences techniques requises.
-          Il présente également des risques liés à la sécurité et à la protection des données personnelles,
-          ce qui impose une gestion rigoureuse et responsable.
-        </p>
-        <a href="big-data.html" class="veille-lien">👆 En savoir plus?! 👆</a>
+        <a href="big-data.html" class="btn-accent">En savoir plus <span class="fl">↗</span></a>
       </div>
-    </div>
-  </section>
+    </article>
 
-  <!-- Veille Numérique quantique -->
-  <section class="section veille-bloc">
-    <div class="conteneur">
-      <div class="veille-img">
+    <!-- Numérique quantique -->
+    <article class="vl-card vl-card--rev" data-reveal>
+      <div class="vl-card__media">
         <img src="images/numérique-quantique/reseau-point-lumineux.jpg"
              alt="Illustration Numérique quantique — réseau de points lumineux">
       </div>
-      <div class="veille-texte">
+      <div class="vl-card__body">
+        <span class="vl-num">02</span>
+        <span class="vl-kicker">Calcul · Qubits · Cryptographie</span>
+        <h2>Numérique quantique</h2>
         <p>
           Le numérique quantique s'appuie sur les propriétés de la mécanique quantique
           (superposition, intrication) pour traiter l'information à l'aide de qubits, là où
@@ -68,26 +81,25 @@
         </p>
         <p>
           Il promet de résoudre en quelques minutes des calculs hors de portée des
-          supercalculateurs actuels, ouvrant des perspectives majeures en chimie, en finance
-          ou en optimisation.<br>
-          Mais il impose des contraintes matérielles extrêmes (refroidissement proche du zéro
-          absolu, correction d'erreurs) et menace surtout les systèmes de chiffrement actuels,
-          imposant une transition vers la cryptographie post-quantique.
+          supercalculateurs actuels (chimie, finance, optimisation), mais impose des contraintes
+          matérielles extrêmes et menace les systèmes de chiffrement actuels — d'où la transition
+          vers la cryptographie post-quantique.
         </p>
-        <a href="quantique.html" class="veille-lien">👆 En savoir plus?! 👆</a>
+        <a href="quantique.html" class="btn-accent">En savoir plus <span class="fl">↗</span></a>
       </div>
-    </div>
+    </article>
+
   </section>
 
-  <!-- Footer -->
+  <!-- Footer (identique au thème) -->
   <footer class="footer" id="site-footer"></footer>
   <script src="js/footer.js"></script>
 
-  <!-- Bouton retour en haut -->
+  <!-- Bouton retour en haut (nouveau design, hérité du thème) -->
   <button id="backToTop" class="back-to-top" aria-label="Remonter en haut de page">↑</button>
 
   <script src="js/header.js"></script>
-  <script src="js/theme.js"></script>
   <script src="js/scroll-top.js"></script>
+  <script src="js/accueil.js"></script>
 </body>
 </html>

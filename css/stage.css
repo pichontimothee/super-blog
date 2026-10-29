@@ -1,0 +1,152 @@
+/* =====================================================================
+   stage.css — Page « Mes stages »
+   Réutilise le THÈME de l'accueil (palette + header/footer/flèche/reveals
+   via .page-accueil) mais change l'AMBIANCE :
+   - typographie : Sora (titres) + DM Sans (texte)  [≠ index & veille]
+   - mise en page : TIMELINE verticale « parcours » (motif inédit)
+   - DA blur conservée mais recolorée à la palette (orange/charcoal)
+   Couleurs identiques : #222831 / #393E46 / #B55400 / #EEEEEE
+   ===================================================================== */
+
+.page-stage{
+  background:var(--c1);color:var(--neutre);
+  font-family:'DM Sans','Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+.page-stage h1,
+.page-stage h2,
+.page-stage h3,
+.page-stage .page-titre{
+  font-family:'Sora','Segoe UI',sans-serif;font-weight:600;letter-spacing:-.02em;
+}
+
+/* ---- Header : identique au thème, lisible sur barre sombre ---- */
+.page-stage .retour{
+  border-color:rgba(238,238,238,.35);color:var(--neutre);
+  transition:background .2s ease,border-color .2s ease,color .2s ease;
+}
+.page-stage .retour:hover{background:rgba(238,238,238,.08);border-color:var(--c3);color:var(--c3);}
+.page-stage .page-titre{color:var(--neutre);font-size:1.5rem;}
+
+/* =====================================================================
+   HERO — DA « blur » conservée, recolorée à la palette
+   ===================================================================== */
+.page-stage .st-hero{
+  position:relative;overflow:hidden;background:var(--c1);
+  padding:clamp(94px,16vh,168px) clamp(24px,6vw,90px) 96px;
+}
+/* aurore floutée (orange + charcoal) — remplace violet/bleu/cyan */
+.page-stage .st-hero::before{
+  content:"";position:absolute;inset:-90px;z-index:0;
+  background:
+    radial-gradient(38% 48% at 72% 18%, rgba(181,84,0,.95), transparent 70%),
+    radial-gradient(42% 52% at 92% 58%, rgba(181,84,0,.55), transparent 70%),
+    radial-gradient(48% 46% at 26% 80%, rgba(57,62,70,.98), transparent 70%),
+    radial-gradient(40% 40% at 12% 28%, rgba(181,84,0,.38), transparent 70%),
+    radial-gradient(36% 36% at 60% 92%, rgba(57,62,70,.8), transparent 70%),
+    var(--c1);
+  filter:blur(80px);transform:scale(1.12);
+}
+/* voile dégradé pour la lisibilité du texte à gauche */
+.page-stage .st-hero::after{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:linear-gradient(90deg, rgba(34,40,49,.88), rgba(34,40,49,.35) 58%, transparent);
+}
+.st-hero__inner{position:relative;z-index:1;max-width:1180px;margin:0 auto;}
+
+.st-eyebrow{
+  display:inline-flex;align-items:center;gap:14px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--neutre);margin-bottom:26px;
+}
+.st-eyebrow b{color:var(--c3);font-weight:700;}
+.st-eyebrow span{width:48px;height:1px;background:rgba(238,238,238,.3);}
+
+.page-stage .st-hero h1{
+  font-size:clamp(2.7rem,6.6vw,5rem);line-height:1.04;margin:0;
+}
+.page-stage .st-hero h1 em{font-style:normal;color:var(--c3);}
+
+.st-lede{
+  max-width:640px;margin-top:26px;
+  font-size:1.18rem;line-height:1.75;color:#f0ece7;
+}
+.st-meta{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;
+  font-family:'JetBrains Mono',monospace;font-size:.82rem;
+}
+.st-meta span{
+  padding:7px 14px;border:1px solid rgba(238,238,238,.22);border-radius:30px;color:var(--neutre);
+  -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+}
+.st-meta span.on{border-color:var(--c3);color:var(--c3);}
+
+/* =====================================================================
+   TIMELINE « parcours » — motif inédit (rail vertical + nœuds)
+   ===================================================================== */
+.page-stage .st-timeline{
+  position:relative;max-width:920px;margin:0 auto;
+  padding:14px clamp(24px,6vw,40px) 110px;
+  display:flex;flex-direction:column;gap:34px;
+}
+.page-stage .st-step{
+  position:relative;display:grid;grid-template-columns:40px 1fr;gap:24px;align-items:start;
+}
+/* ligne reliant les nœuds */
+.page-stage .st-step::before{
+  content:"";position:absolute;left:19px;top:14px;bottom:-34px;width:2px;
+  background:rgba(181,84,0,.35);
+}
+.page-stage .st-step:last-child::before{display:none;}
+
+.st-node{
+  position:relative;z-index:1;
+  width:40px;height:40px;border-radius:50%;
+  background:var(--c1);border:2px solid var(--c3);color:var(--c3);
+  display:grid;place-items:center;
+  font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.9rem;
+}
+
+.st-card{
+  display:grid;grid-template-columns:150px 1fr;gap:26px;align-items:center;
+  background:#2a313b;border:1px solid rgba(238,238,238,.1);border-radius:18px;
+  padding:22px;color:var(--neutre);text-decoration:none;
+  transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease;
+}
+.st-card:hover{
+  border-color:rgba(181,84,0,.55);transform:translateX(5px);
+  box-shadow:0 22px 50px rgba(0,0,0,.4);
+}
+
+/* Volet média — logos .png calés proprement (contain sur pastille claire) */
+.st-logo{
+  width:150px;height:140px;border-radius:14px;flex:none;
+  background:var(--neutre);display:grid;place-items:center;padding:18px;
+}
+.st-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block;}
+/* Variante photo (plein cadre) */
+.st-logo--photo{padding:0;background:#1b2027;overflow:hidden;}
+.st-logo--photo img{width:100%;height:100%;object-fit:cover;}
+
+.st-period{
+  font-family:'JetBrains Mono',monospace;font-size:.74rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--c3);
+}
+.page-stage .st-card h2{font-size:1.55rem;margin:6px 0 8px;}
+.st-card p{color:var(--txt-doux-clair);font-size:1rem;line-height:1.6;margin:0 0 14px;}
+.st-go{
+  font-family:'JetBrains Mono',monospace;font-size:.85rem;
+  display:inline-flex;align-items:center;gap:8px;color:var(--neutre);
+  transition:color .2s ease;
+}
+.st-go .fl{transition:transform .2s ease;}
+.st-card:hover .st-go{color:var(--c3);}
+.st-card:hover .st-go .fl{transform:translate(3px,-3px);}
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+@media(max-width:720px){
+  .page-stage .st-card{grid-template-columns:1fr;gap:18px;}
+  .st-logo{width:100%;height:170px;}
+}

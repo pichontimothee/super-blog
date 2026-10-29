@@ -4,20 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stage - SCA Ouest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Réutilise le thème/chrome de l'accueil (header, footer, flèche, reveals) -->
+  <link rel="stylesheet" href="css/accueil.css">
+  <link rel="stylesheet" href="css/article.css">
 </head>
-<body>
+<!-- .page-accueil = chrome commun · .page-article = ambiance long-read -->
+<body class="page-accueil page-article">
 
-  <!-- En-tete (injecté par js/header.js) -->
+  <!-- En-tete (identique au thème, injecté par js/header.js) -->
   <header class="entete" id="site-header" data-title="SCA OUEST" data-back="stage.html"></header>
 
-  <!-- Hero -->
-  <section class="sd-hero">
+  <!-- Hero (duotone) -->
+  <section class="sd-hero" style="--hero-img:url('images/sca_ouest.jpg')">
     <div class="sd-hero-inner">
-      <span class="sd-kicker">🚀 Retour d'expérience — Stage</span>
-      <h1>SCA Ouest</h1>
-      <p>Au cœur de l'automatisation et du déploiement réseau</p>
-      <div class="sd-meta">
+      <span class="sd-kicker" data-reveal>Retour d'expérience — Stage</span>
+      <h1 data-reveal style="--d:80ms">SCA Ouest</h1>
+      <p data-reveal style="--d:150ms">Au cœur de l'automatisation et du déploiement réseau</p>
+      <div class="sd-meta" data-reveal style="--d:220ms">
         <span>⏱️ 6 semaines</span>
         <span>🏢 Centrale d'achat E.Leclerc</span>
         <span>🎓 BTS SIO — SISR</span>
@@ -27,23 +34,23 @@
 
   <!-- Article -->
   <main class="sd-wrap">
-    <p class="sd-intro">Bonjour à tous ! Après 6 semaines intenses et riches en apprentissages
+    <p class="sd-intro" data-reveal>Bonjour à tous ! Après 6 semaines intenses et riches en apprentissages
       au sein du service informatique technique de la SCA Ouest (centrale d'achat E.Leclerc),
       c'est l'heure du bilan.</p>
-    <p>Pendant ce stage, j'ai eu la chance de piloter deux projets majeurs mêlant système,
+    <p data-reveal>Pendant ce stage, j'ai eu la chance de piloter deux projets majeurs mêlant système,
       réseau et automatisation. Retour sur ces missions qui ont rythmé mon quotidien.</p>
 
     <!-- Projet 1 -->
-    <article class="sd-card">
+    <article class="sd-card" data-reveal>
       <span class="sd-badge">Projet 1</span>
-      <h2>🛠️ Déploiement industriel &amp; optimisation de scripts</h2>
+      <h2>Déploiement industriel &amp; optimisation de scripts</h2>
       <p class="sd-soustitre">Terminaux embarqués JLT</p>
       <p>Le gros morceau de mon stage a été la modernisation du parc de terminaux embarqués
         (JLT) installés directement sur les chariots élévateurs des préparateurs de commandes.
         L'objectif ? Remplacer les anciennes machines obsolètes par des terminaux durcis,
         performants et sécurisés.</p>
 
-      <h3 class="sd-sub">💻 Mon défi : dompter le PowerShell</h3>
+      <h3 class="sd-sub">Mon défi : dompter le PowerShell</h3>
       <p>Pour éviter de configurer chaque machine à la main, l'équipe m'a fourni un script
         d'automatisation. Problème : le script plantait systématiquement au premier démarrage
         sur la configuration Wi-Fi.</p>
@@ -53,7 +60,7 @@
 
       <div class="compare">
         <div class="compare-box avant">
-          <span class="compare-tag">❌ Avant mon intervention</span>
+          <span class="compare-tag">✗ Avant mon intervention</span>
           <ol class="flow">
             <li>Allumage du PC</li>
             <li>Lancement du script</li>
@@ -81,9 +88,9 @@
     </article>
 
     <!-- Projet 2 -->
-    <article class="sd-card">
+    <article class="sd-card" data-reveal>
       <span class="sd-badge">Projet 2</span>
-      <h2>🖥️ Affichage dynamique sous Linux avec Xibo</h2>
+      <h2>Affichage dynamique sous Linux avec Xibo</h2>
       <p>Mon second projet consistait à déployer et configurer une solution d'affichage
         dynamique pour la communication interne du site, en installant le lecteur
         <strong>Xibo Player</strong> sur un environnement <strong>Ubuntu 24.04</strong>.</p>
@@ -94,8 +101,8 @@
     </article>
 
     <!-- Le quotidien -->
-    <article class="sd-card">
-      <h2>🔌 Le quotidien : brassage réseau &amp; gestion de parc</h2>
+    <article class="sd-card" data-reveal>
+      <h2>Le quotidien : brassage réseau &amp; gestion de parc</h2>
       <p>En parallèle, j'ai participé activement à la vie du service.</p>
       <div class="sd-stats">
         <div class="stat">
@@ -114,8 +121,8 @@
     </article>
 
     <!-- Conclusion -->
-    <article class="sd-card sd-conclusion">
-      <h2>📈 Ce que je retiens de cette expérience</h2>
+    <article class="sd-card sd-conclusion" data-reveal>
+      <h2>Ce que je retiens de cette expérience</h2>
       <p>Ce stage à la SCA Ouest a été un excellent tremplin. Il m'a permis de faire le pont
         entre la théorie de mon BTS SIO SISR et la réalité d'une infrastructure de production
         d'envergure.</p>
@@ -125,15 +132,15 @@
     </article>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer (identique au thème) -->
   <footer class="footer" id="site-footer"></footer>
   <script src="js/footer.js"></script>
 
-  <!-- Bouton retour en haut -->
+  <!-- Bouton retour en haut (nouveau design, hérité du thème) -->
   <button id="backToTop" class="back-to-top" aria-label="Remonter en haut de page">↑</button>
 
   <script src="js/header.js"></script>
-  <script src="js/theme.js"></script>
   <script src="js/scroll-top.js"></script>
+  <script src="js/accueil.js"></script>
 </body>
 </html>

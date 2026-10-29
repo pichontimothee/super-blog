@@ -1,0 +1,32 @@
+# =====================================================================
+#  Stack n8n — Raspberry Pi 4 / OpenMediaVault 8 (aarch64)
+#  n8n écrit :
+#    - la copie HUB    -> /data/veille        (dossier local du NAS)
+#    - la copie BLOG   -> /data/blog          (partage réseau du PC : E:\blog)
+#
+#  Le dossier /data/blog pointe vers un PARTAGE SMB du PC, monté sur le Pi.
+#  => le chemin exact sera fixé APRÈS l'étape "Remote Mount" (voir chat).
+# =====================================================================
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - TZ=Europe/Paris
+      - GENERIC_TIMEZONE=Europe/Paris
+      - N8N_SECURE_COOKIE=false          # autorise la connexion en http local
+      - N8N_HOST=192.168.1.40
+      - N8N_PORT=5678
+      - WEBHOOK_URL=http://192.168.1.40:5678/
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_RESTRICT_FILE_ACCESS_TO=/data # autorise les nodes à écrire dans /data (blog + veille)
+      - EXECUTIONS_DATA_PRUNE=true        # purge auto de l'historique
+      - EXECUTIONS_DATA_MAX_AGE=336       # garde 14 jours d'exécutions
+    volumes:
+      - /srv/dev-disk-by-uuid-15d7f427-c2be-4e4e-a633-2a57bd15c59f/workflow/appdata/n8n:/home/node/.n8n
+      - /srv/dev-disk-by-uuid-15d7f427-c2be-4e4e-a633-2a57bd15c59f/workflow/veille:/data/veille
+      # Partage du PC (E:\blog) monté sur le Pi via Remote Mount :
+      - /srv/remotemount/blog:/data/blog

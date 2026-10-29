@@ -4,21 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stage - Duqueine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Réutilise le thème/chrome de l'accueil (header, footer, flèche, reveals) -->
+  <link rel="stylesheet" href="css/accueil.css">
+  <link rel="stylesheet" href="css/article.css">
 </head>
-<body>
+<!-- .page-accueil = chrome commun · .page-article = ambiance long-read -->
+<body class="page-accueil page-article">
 
-  <!-- En-tete (injecté par js/header.js) -->
+  <!-- En-tete (identique au thème, injecté par js/header.js) -->
   <header class="entete" id="site-header" data-title="DUQUEINE" data-back="stage.html"></header>
 
-  <!-- Hero -->
-  <section class="sd-hero hero-duqueine">
+  <!-- Hero (recoloré à la palette, logo sur pastille claire) -->
+  <section class="sd-hero">
     <div class="sd-hero-inner">
-      <img class="hero-logo" src="images/duqueine.png" alt="Logo Duqueine">
-      <span class="sd-kicker">🚀 Retour d'expérience — Stage</span>
-      <h1>Duqueine Atlantique</h1>
-      <p>Administration systèmes, virtualisation &amp; sécurité en environnement industriel</p>
-      <div class="sd-meta">
+      <img class="hero-logo" src="images/duqueine.png" alt="Logo Duqueine" data-reveal>
+      <span class="sd-kicker" data-reveal style="--d:60ms">Retour d'expérience — Stage</span>
+      <h1 data-reveal style="--d:120ms">Duqueine Atlantique</h1>
+      <p data-reveal style="--d:190ms">Administration systèmes, virtualisation &amp; sécurité en environnement industriel</p>
+      <div class="sd-meta" data-reveal style="--d:260ms">
         <span>⏱️ 6 semaines</span>
         <span>✈️ Composites &amp; aéronautique</span>
         <span>🎓 BTS SIO — SISR</span>
@@ -30,8 +37,8 @@
   <main class="sd-wrap">
 
     <!-- L'entreprise -->
-    <article class="sd-card">
-      <h2>🏭 L'entreprise</h2>
+    <article class="sd-card" data-reveal>
+      <h2>L'entreprise</h2>
       <p>Duqueine Group conçoit et fabrique des pièces et sous-ensembles en
         <strong>matériaux composites hautes performances</strong> pour l'aéronautique, le
         nautisme, l'automobile, le médical et la défense. Le site <strong>Duqueine Atlantique</strong>
@@ -46,9 +53,9 @@
     </article>
 
     <!-- Mission 1 -->
-    <article class="sd-card">
+    <article class="sd-card" data-reveal>
       <span class="sd-badge">Mission 1</span>
-      <h2>🛡️ Création d'une « station blanche »</h2>
+      <h2>Création d'une « station blanche »</h2>
       <div class="axe-objectif">
         <strong>Objectif :</strong> déployer un poste totalement isolé destiné à analyser et
         désinfecter les clés USB des utilisateurs avant leur connexion au réseau de l'entreprise.
@@ -66,9 +73,9 @@
     </article>
 
     <!-- Mission 2 -->
-    <article class="sd-card">
+    <article class="sd-card" data-reveal>
       <span class="sd-badge">Mission 2</span>
-      <h2>💻 Reconfiguration &amp; revalorisation d'un parc PC</h2>
+      <h2>Reconfiguration &amp; revalorisation d'un parc PC</h2>
       <div class="axe-objectif">
         <strong>Objectif :</strong> réinitialiser, diagnostiquer et masteriser plus de 20 ordinateurs
         (fixes et portables) afin de les revendre aux salariés à bas prix.
@@ -84,9 +91,9 @@
     </article>
 
     <!-- Mission 3 -->
-    <article class="sd-card">
+    <article class="sd-card" data-reveal>
       <span class="sd-badge">Mission 3</span>
-      <h2>📊 Supervision avec Zabbix</h2>
+      <h2>Supervision avec Zabbix</h2>
       <div class="axe-objectif">
         <strong>Objectif :</strong> mettre en place une supervision des équipements via un serveur Zabbix.
       </div>
@@ -101,15 +108,15 @@
     </article>
 
     <!-- Étude de cas -->
-    <article class="sd-card">
+    <article class="sd-card" data-reveal>
       <span class="sd-badge">Étude de cas</span>
-      <h2>🗂️ Migration du wiki d'entreprise (Wiki.js)</h2>
+      <h2>Migration du wiki d'entreprise (Wiki.js)</h2>
       <p>Le service informatique utilise <strong>Wiki.js</strong> comme base de connaissances
         centralisée (procédures de résolution d'incidents, documentation interne). Initialement
         mutualisé sur un serveur hébergeant aussi un service GitHub, l'objectif était d'isoler
         l'application sur sa propre machine virtuelle, selon le principe « une fonction = un serveur ».</p>
 
-      <h3 class="sd-sub">🧩 Architecture cible (sur Proxmox VE)</h3>
+      <h3 class="sd-sub">Architecture cible (sur Proxmox VE)</h3>
       <div class="archi">
         <div class="vm">
           <h4>VM Application &amp; Data</h4>
@@ -121,19 +128,19 @@
         </div>
       </div>
 
-      <h3 class="sd-sub">⚙️ Déploiement &amp; migration</h3>
+      <h3 class="sd-sub">Déploiement &amp; migration</h3>
       <p>Création d'une VM Debian 12 (2 vCPU, 2 Go de RAM, 20 Go de stockage) avec IP fixe, puis
         installation de Node.js et de MariaDB. Les données ont été migrées par export de l'ancienne
         base (<code>mysqldump</code>), transfert sécurisé via WinSCP, puis restauration. Un service
         <strong>systemd</strong> (<code>wiki.service</code>) garantit le démarrage automatique de
         l'application au boot du serveur.</p>
 
-      <h3 class="sd-sub">🔒 Reverse proxy &amp; sécurité</h3>
+      <h3 class="sd-sub">Reverse proxy &amp; sécurité</h3>
       <p>Un reverse proxy <strong>Apache2</strong> (modules <code>proxy</code> et <code>headers</code>)
         redirige le trafic du port 80 vers l'application, tout en injectant des en-têtes de sécurité
         (<code>X-Frame-Options</code>, <code>X-XSS-Protection</code>, <code>X-Content-Type-Options</code>).</p>
 
-      <h3 class="sd-sub">⚠️ Limite rencontrée (HTTPS)</h3>
+      <h3 class="sd-sub">Limite rencontrée (HTTPS)</h3>
       <p>Un certificat SSL auto-signé a bien été généré (clé privée et demande de signature), mais
         faute d'un bloc <code>VirtualHost *:443</code> actif pointant vers les certificats, l'accès
         est resté en <strong>HTTP</strong> à la fin du stage — une piste d'amélioration clairement
@@ -141,8 +148,8 @@
     </article>
 
     <!-- Bilan -->
-    <article class="sd-card sd-conclusion">
-      <h2>📈 Bilan &amp; compétences acquises</h2>
+    <article class="sd-card sd-conclusion" data-reveal>
+      <h2>Bilan &amp; compétences acquises</h2>
       <p>Ce stage a été une immersion totale de six semaines dans un environnement de production
         industrielle exigeant, au cœur du secteur aéronautique.</p>
       <div class="chips">
@@ -157,15 +164,15 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- Footer (identique au thème) -->
   <footer class="footer" id="site-footer"></footer>
   <script src="js/footer.js"></script>
 
-  <!-- Bouton retour en haut -->
+  <!-- Bouton retour en haut (nouveau design, hérité du thème) -->
   <button id="backToTop" class="back-to-top" aria-label="Remonter en haut de page">↑</button>
 
   <script src="js/header.js"></script>
-  <script src="js/theme.js"></script>
   <script src="js/scroll-top.js"></script>
+  <script src="js/accueil.js"></script>
 </body>
 </html>

@@ -576,6 +576,21 @@ body.dark.page-bigdata{background:#0f1115;}
 .actu-carte h3{font-size:1.2rem;margin-bottom:12px;}
 .actu-carte p{font-size:1rem;color:var(--texte-doux);margin-bottom:14px;}
 .actu-date{font-size:.85rem;font-weight:700;color:var(--texte-doux);}
+/* Méta de carte (date + source) pour le fil dynamique */
+.actu-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-top:4px;}
+.actu-source{font-size:.85rem;font-weight:600;color:#667eea;text-decoration:none;}
+.actu-source:hover{text-decoration:underline;}
+.actu-source--plain{color:var(--texte-doux);font-weight:500;}
+.actu-source--plain:hover{text-decoration:none;}
+.rapports-maj{display:inline-block;font-size:.85rem;color:var(--texte-doux);font-style:italic;}
+.actu-chargement{color:var(--texte-doux);font-style:italic;padding-left:4px;}
+.actu-erreur{color:#c0392b;padding-left:4px;}
+/* Image d'axe : grande, calée à droite, le texte l'habille à gauche */
+.axe-photo{float:right;width:45%;max-width:460px;margin:6px 0 18px 30px;}
+.axe-photo img{width:100%;height:auto;display:block;border-radius:14px;}
+@media (max-width:720px){
+  .axe-photo{float:none;width:100%;max-width:100%;margin:0 0 18px 0;}
+}
 
 /* Encadré "Focus entreprise" (ex. Pasqal) */
 .focus-entreprise{

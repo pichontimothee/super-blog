@@ -1,0 +1,91 @@
+{
+  "page": "quantique",
+  "titre": "Le numérique quantique",
+  "description": "Contenu dynamique des axes de veille. Fichier maître lu par quantique-v2.html. Destiné à être mis à jour (manuellement ou via n8n) avec trace horodatée.",
+  "derniereMaj": "2026-10-02T10:00:00+02:00",
+  "axes": [
+    {
+      "id": "axe1",
+      "numero": "Axe 1",
+      "titre": "Architecture matérielle &amp; correction d'erreurs (FTQC)",
+      "objectif": "suivre la transition des calculateurs quantiques « bruités » (ère NISQ) vers des calculateurs <em>tolérants aux pannes</em> (Fault-Tolerant Quantum Computing, FTQC), seuls capables d'exécuter des algorithmes utiles à grande échelle.",
+      "horodatage": "2026-10-02T10:00:00+02:00",
+      "blocs": [
+        {
+          "type": "section",
+          "sousTitre": "🌀 Superposition &amp; intrication",
+          "texte": "<p>Deux phénomènes rendent le qubit si puissant. La <strong>superposition</strong> lui permet d'être dans une combinaison des états 0 et 1 tant qu'on ne le mesure pas ; un ensemble de <em>n</em> qubits peut ainsi explorer 2<sup>n</sup> combinaisons simultanément. L'<strong>intrication</strong> lie plusieurs qubits de sorte que l'état de l'un dépend instantanément de celui des autres. Ensemble, ces propriétés autorisent un parallélisme massif du traitement de l'information, hors de portée des machines classiques.</p>"
+        },
+        {
+          "type": "section",
+          "sousTitre": "❄️ Le bruit quantique &amp; la décohérence",
+          "texte": "<p>Le talon d'Achille de la technologie est sa <strong>fragilité</strong>. Les qubits sont extrêmement sensibles à leur environnement : la moindre variation de chaleur, une onde électromagnétique ou une vibration suffit à détruire leur état — c'est la <strong>décohérence</strong>. Pour la limiter, la plupart des machines (qubits supraconducteurs) doivent être refroidies par cryogénie à environ <strong>−273 °C</strong>, à un cheveu du zéro absolu, ce qui explique leur coût et leur complexité d'exploitation.</p>"
+        },
+        {
+          "type": "section",
+          "sousTitre": "🧩 Qubits physiques vs qubits logiques",
+          "texte": "<p>L'enjeu du moment ne se résume plus au nombre brut de <strong>qubits physiques</strong> (les constructeurs annoncent désormais plus de 1 000 qubits). Le véritable défi est la création de <strong>qubits logiques</strong> : on assemble des dizaines, voire des centaines de qubits physiques et un code de correction d'erreurs pour former un seul qubit « idéal », stable et fiable. C'est le passage à un nombre suffisant de qubits logiques qui marquera l'entrée dans l'ère du calcul quantique <em>tolérant aux pannes</em>.</p>"
+        }
+      ]
+    },
+    {
+      "id": "axe2",
+      "numero": "Axe 2",
+      "titre": "Risque cryptographique &amp; post-quantique (PQC)",
+      "objectif": "surveiller la menace que le quantique fait peser sur la sécurité informatique et suivre la migration vers des algorithmes résistants aux attaques quantiques.",
+      "horodatage": "2026-10-02T10:00:00+02:00",
+      "blocs": [
+        {
+          "type": "section",
+          "sousTitre": "🔓 La menace : l'algorithme de Shor",
+          "texte": "<p>Un ordinateur quantique suffisamment puissant, exécutant l'<strong>algorithme de Shor</strong>, pourra casser en un temps très court les systèmes de chiffrement <strong>asymétrique</strong> utilisés partout aujourd'hui — <strong>RSA</strong>, <strong>ECC</strong> et l'échange de clés Diffie-Hellman. Or ce sont eux qui sécurisent le HTTPS, les VPN, la signature électronique, la banque en ligne et une grande partie d'Internet. Leur remise en cause bouleverserait l'ensemble de la sécurité des réseaux.</p>"
+        },
+        {
+          "type": "image",
+          "src": "images/numérique-quantique/crypto-quantique.jpg",
+          "alt": "Cryptographie post-quantique — sécurité des données",
+          "petit": true
+        },
+        {
+          "type": "section",
+          "sousTitre": "🕰️ « Harvest now, decrypt later »",
+          "texte": "<p>La menace n'est pas seulement future. Selon la logique du « <strong>récolter maintenant, déchiffrer plus tard</strong> », des attaquants interceptent et stockent <em>dès aujourd'hui</em> des données confidentielles chiffrées, dans l'idée de les déchiffrer dans 5 à 10 ans, une fois la puissance quantique disponible. Les informations à longue durée de vie (secrets d'État, données de santé, propriété industrielle) sont donc déjà exposées, ce qui rend la migration urgente.</p>"
+        },
+        {
+          "type": "section",
+          "sousTitre": "🛡️ La cryptographie post-quantique (PQC)",
+          "texte": "<p>La réponse est la <strong>cryptographie post-quantique</strong> : de nouveaux algorithmes fondés sur des problèmes mathématiques que même un ordinateur quantique ne sait pas résoudre efficacement, comme le chiffrement sur <strong>réseaux euclidiens</strong>. En 2024, le <strong>NIST</strong> a officialisé les premiers standards — <strong>ML-KEM</strong> (ex-Kyber) pour l'échange de clés et <strong>ML-DSA</strong> (ex-Dilithium) pour la signature. L'enjeu pour les DSI est désormais l'<strong>agilité cryptographique</strong> : être capable de remplacer progressivement les certificats TLS, VPN et briques de sécurité par ces standards résistants.</p>"
+        }
+      ]
+    },
+    {
+      "id": "axe3",
+      "numero": "Axe 3",
+      "titre": "Cas d'usage sectoriels &amp; souveraineté",
+      "objectif": "identifier les applications concrètes en entreprise et suivre les stratégies d'investissement des États dans une technologie devenue géostratégique.",
+      "horodatage": "2026-10-02T10:00:00+02:00",
+      "blocs": [
+        {
+          "type": "split",
+          "sousTitre": "🏭 Des secteurs clés déjà en mouvement",
+          "texte": "<ul><li><strong>Chimie &amp; santé :</strong> simulation fine de molécules pour accélérer la découverte de médicaments et concevoir de nouveaux matériaux (batteries, catalyseurs).</li><li><strong>Finance &amp; logistique :</strong> optimisation de portefeuilles, calcul de risque et résolution de problèmes d'optimisation complexes (type « voyageur de commerce » : tournées, chaînes d'approvisionnement).</li><li><strong>IA &amp; quantique (QML) :</strong> le <em>Quantum Machine Learning</em> explore l'usage d'algorithmes quantiques pour accélérer certaines phases d'entraînement des modèles d'IA.</li></ul>",
+          "image": {
+            "src": "images/numérique-quantique/usage-quantique.jpg",
+            "alt": "Cas d'usage du numérique quantique"
+          }
+        },
+        {
+          "type": "section",
+          "sousTitre": "🌍 Souveraineté &amp; géopolitique",
+          "texte": "<p>Le quantique est devenu un terrain de <strong>compétition stratégique</strong> entre les États-Unis, la Chine et l'Europe. Maîtriser cette technologie, c'est éviter une future dépendance — tant sur le plan économique que sur celui de la sécurité, à cause du risque cryptographique. La France a lancé une <strong>Stratégie nationale quantique</strong> (plan d'investissement de l'ordre de 1,8 milliard d'euros), pendant que la Commission européenne coordonne ses propres initiatives pour bâtir un écosystème souverain, du matériel au logiciel.</p>"
+        },
+        {
+          "type": "focus",
+          "tag": "🇫🇷 Focus entreprise",
+          "titre": "Pasqal — un champion français du quantique",
+          "texte": "<p>Basée à Palaiseau et cofondée notamment par le prix Nobel de physique <strong>Alain Aspect</strong> (2022), <strong>Pasqal</strong> conçoit des ordinateurs quantiques d'un type particulier, fondés sur les <strong>atomes neutres</strong>. L'entreprise incarne concrètement la souveraineté quantique européenne : ses processeurs sont déjà accessibles via le cloud et déployés auprès de centres de calcul, ce qui en fait l'un des acteurs les plus innovants — et les plus prometteurs — du secteur.</p>"
+        }
+      ]
+    }
+  ]
+}
