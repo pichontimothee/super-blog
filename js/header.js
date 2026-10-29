@@ -4,6 +4,16 @@
 //   <header class="entete" id="site-header" data-title="L'IA"
 //           data-back="veille.html"></header>                            (autres pages : ← + titre)
 // Injecté en JS (fonctionne aussi en ouverture locale file://).
+// Favicon commune (injectée pour toutes les pages, y compris /docs/).
+(function () {
+  const prefix = /\/docs\//.test(location.pathname) ? '../' : '';
+  const link = document.createElement('link');
+  link.rel = 'icon';
+  link.type = 'image/svg+xml';
+  link.href = prefix + 'favicon.svg';
+  document.head.appendChild(link);
+})();
+
 (function () {
   const el = document.getElementById('site-header');
   if (!el) return;

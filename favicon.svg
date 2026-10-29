@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="TP — Timothée Pichon">
+  <rect width="64" height="64" rx="15" fill="#222831"/>
+  <g fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- T : hampe -->
+    <line x1="21" y1="20" x2="21" y2="46" stroke="#EEEEEE"/>
+    <!-- P : hampe -->
+    <line x1="38" y1="19" x2="38" y2="46" stroke="#EEEEEE"/>
+    <!-- P : boucle -->
+    <path d="M38 19 h7 a8.5 8.5 0 0 1 0 17 h-7" stroke="#EEEEEE"/>
+    <!-- T : barre (accent orange) -->
+    <line x1="11" y1="19" x2="31" y2="19" stroke="#B55400"/>
+  </g>
+</svg>
